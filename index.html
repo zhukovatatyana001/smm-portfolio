@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Татьяна Жукова — портфолио SMM-специалиста</title>
+<meta name="description" content="Портфолио SMM-специалиста: стратегия, контент-план, Reels, карусели и кейсы.">
+<style>
+  @font-face{font-family:"Unbounded";src:url("fonts/unbounded-cyrillic-wght-normal.woff2") format("woff2");font-weight:200 900;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+  @font-face{font-family:"Unbounded";src:url("fonts/unbounded-latin-wght-normal.woff2") format("woff2");font-weight:200 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+  @font-face{font-family:"Onest";src:url("fonts/onest-cyrillic-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+  @font-face{font-family:"Onest";src:url("fonts/onest-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+  :root{
+    --paper:#F6F7FB;
+    --white:#FFFFFF;
+    --ink:#151833;
+    --ink-soft:#5A5E7A;
+    --ultra:#3538E0;
+    --haze:#DDE0FA;
+    --blush:#F3C9BE;
+    --line:rgba(21,24,51,.12);
+    --display:"Unbounded",system-ui,sans-serif;
+    --text:"Onest",system-ui,sans-serif;
+    --wrap:1180px;
+    --pad:clamp(20px,5vw,56px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ultra);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+
+  /* шапка */
+  .top{position:sticky;top:0;z-index:20;background:rgba(246,247,251,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;gap:28px;height:64px}
+  .logo{font-family:var(--display);font-weight:300;font-size:15px;text-decoration:none;white-space:nowrap}
+  .nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
+  .nav a{text-decoration:none;color:var(--ink-soft)}
+  .nav a:hover{color:var(--ultra)}
+  .toggle{display:flex;align-items:center;gap:10px;font:inherit;font-size:14px;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 8px;cursor:pointer;white-space:nowrap}
+  .toggle i{width:30px;height:18px;border-radius:999px;background:var(--ultra);position:relative;transition:background .2s}
+  .toggle i::after{content:"";position:absolute;top:2px;left:14px;width:14px;height:14px;border-radius:50%;background:#fff;transition:left .2s}
+  body.clean .toggle i{background:#C5C8D8}
+  body.clean .toggle i::after{left:2px}
+
+  /* первый экран */
+  .hero{padding:clamp(48px,9vw,120px) 0 clamp(56px,8vw,110px)}
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,72px);align-items:center}
+  h1{font-family:var(--display);font-weight:200;font-size:clamp(38px,6.6vw,92px);line-height:1.02;overflow-wrap:anywhere;letter-spacing:-.035em}
+  .lead{margin-top:28px;max-width:30em;font-size:clamp(18px,1.6vw,21px);color:var(--ink-soft)}
+  .facts{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px 28px;font-size:15px}
+  .facts span{color:var(--ink-soft)}
+  .cta{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-block;text-decoration:none;font-weight:500;font-size:16px;padding:14px 26px;border-radius:999px;background:var(--ink);color:#fff}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .btn:hover{background:var(--ultra);border-color:var(--ultra);color:#fff}
+  .screens{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
+  .screens .slot{border-radius:22px}
+  .screens .slot:nth-child(1){margin-top:64px;background:var(--haze)}
+  .screens .slot:nth-child(2){background:var(--ink)}
+  .screens .slot:nth-child(2) .hint{color:#fff}
+  .screens .slot:nth-child(3){margin-top:112px;background:var(--ultra)}
+  .screens .slot:nth-child(3) .hint{color:#fff}
+
+  /* секции */
+  section{padding:clamp(56px,8vw,112px) 0;border-top:1px solid var(--line)}
+  .part{background:var(--ink);color:#fff;border:0;padding:clamp(40px,6vw,72px) 0}
+  .part p{font-family:var(--display);font-weight:200;font-size:clamp(26px,4.4vw,56px);line-height:1.1;letter-spacing:-.02em}
+  .part small{display:block;margin-top:14px;font-family:var(--text);font-size:16px;color:#B9BDE0;letter-spacing:0}
+  .head{display:grid;grid-template-columns:minmax(0,90px) minmax(0,1fr);gap:20px;align-items:baseline;margin-bottom:40px}
+  .num{font-family:var(--display);font-weight:200;font-size:clamp(32px,4vw,52px);color:var(--ultra);line-height:1}
+  h2{font-family:var(--display);font-weight:300;font-size:clamp(26px,3.4vw,42px);line-height:1.12;letter-spacing:-.02em}
+  .head p{grid-column:2;margin-top:10px;color:var(--ink-soft);max-width:38em}
+  h3{font-weight:600;font-size:18px;margin-bottom:8px}
+  .body{margin-left:110px}
+  .cols{display:grid;gap:18px}
+  .c2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .c5{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .card{background:var(--white);border-radius:18px;padding:26px}
+  .card p{color:var(--ink-soft);font-size:16px}
+  .tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
+  .tags li{background:var(--white);border-radius:999px;padding:10px 18px;font-size:16px}
+  .tags li.own{background:var(--haze)}
+  .gap{margin-top:22px}
+
+  /* места под материалы */
+  .slot{position:relative;background:var(--haze);border-radius:16px;display:flex;align-items:flex-end;min-height:120px;overflow:hidden;outline:1.5px dashed rgba(53,56,224,.55);outline-offset:-1.5px}
+  .slot.r916{aspect-ratio:9/16;min-height:0}
+  .slot.r45{aspect-ratio:4/5;min-height:0}
+  .slot.r11{aspect-ratio:1/1;min-height:0}
+  .slot.wide{aspect-ratio:16/9;min-height:0}
+  .slot.doc{min-height:200px}
+  .hint{padding:16px 18px;font-size:14px;line-height:1.45;color:var(--ink)}
+  .hint b{display:block;font-weight:600;color:var(--ultra)}
+  .slot:nth-child(n) .hint b{color:inherit;opacity:.72}
+  .note{margin-top:14px;font-size:14px;color:var(--ultra)}
+  .draft::after{content:"черновик";margin-left:10px;font-family:var(--text);font-size:12px;font-weight:500;letter-spacing:0;color:var(--ultra);background:var(--haze);border-radius:999px;padding:3px 10px;vertical-align:middle;white-space:nowrap}
+  body.clean .hint,body.clean .note{display:none}
+  body.clean .slot{outline:0}
+  body.clean .draft::after{display:none}
+
+  .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-width:420px}
+  .feed .slot{border-radius:6px;min-height:0;outline-width:1px}
+  .scroller{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(210px,1fr);gap:14px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
+  .scroller .slot{scroll-snap-align:start}
+
+  /* кейсы */
+  .case-title{font-family:var(--display);font-weight:200;font-size:clamp(34px,6vw,84px);line-height:1;letter-spacing:-.03em}
+  .case-meta{margin-top:22px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+  .case-meta div{border-top:1px solid var(--ink);padding-top:14px}
+  .case-meta dt{font-size:14px;color:var(--ink-soft)}
+  .case-meta dd{font-family:var(--display);font-weight:300;font-size:clamp(20px,2.4vw,30px);margin-top:4px}
+
+  /* поиск клиентов */
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+  .steps li{display:grid;grid-template-columns:84px 1fr;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line)}
+  .steps b{font-family:var(--display);font-weight:300;font-size:28px;color:var(--ultra)}
+
+  footer{background:var(--ink);color:#fff;padding:clamp(56px,8vw,104px) 0}
+  footer h2{font-weight:200;font-size:clamp(32px,6vw,76px)}
+  footer .links{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+  footer .btn{background:#fff;color:var(--ink)}
+  footer .btn.ghost{background:transparent;color:#fff;border-color:#fff}
+  footer .hint{color:#B9BDE0;padding:18px 0 0}
+
+  @media (max-width:900px){
+    .nav{display:none}
+    .toggle{margin-left:auto}
+    .hero .wrap{grid-template-columns:1fr}
+    .head{grid-template-columns:1fr;gap:6px}
+    .head p{grid-column:1}
+    .body{margin-left:0}
+    .c3,.c4,.c5{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .case-meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .steps{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .c2{grid-template-columns:1fr}
+    .screens .slot:nth-child(1){margin-top:32px}
+    .screens .slot:nth-child(3){margin-top:56px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.toggle i,.toggle i::after{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Татьяна Жукова</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#about">Обо мне</a>
+      <a href="#education">Образование</a>
+      <a href="#skills">Навыки</a>
+      <a href="#case1">Кейсы</a>
+      <a href="#clients">Поиск клиентов</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button class="toggle" id="toggle" type="button" aria-pressed="true"><i></i><span>Подсказки</span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ПЕРВЫЙ ЭКРАН -->
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Татьяна Жукова</h1>
+      <p class="lead draft">SMM для экспертов: стратегия, контент-план и Reels, которые досматривают и пересылают.</p>
+      <div class="facts">
+        <div><span>Где работаю</span><br>Германия, онлайн</div>
+        <div><span>С кем</span><br>эксперты, коучи, практики</div>
+        <div><span>На рынке</span><br>в онлайн-маркетинге с 2012 года</div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#case1">Смотреть кейсы</a>
+        <a class="btn ghost" href="#contacts">Написать мне</a>
+      </div>
+    </div>
+    <div class="screens" aria-hidden="true">
+      <div class="slot r916"><p class="hint"><b>Сюда</b>обложка или кадр лучшего ролика</p></div>
+      <div class="slot r916"><p class="hint"><b>Сюда</b>твоё фото, вертикальное, средний план</p></div>
+      <div class="slot r916"><p class="hint"><b>Сюда</b>ещё один ролик или карусель</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ЧАСТЬ 1 -->
+<div class="part"><div class="wrap"><p>Часть 1. Портфолио<small>Разделы 1–3 задания: знакомство, образование, навыки</small></p></div></div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">1</span>
+      <div><h2>Знакомство со специалистом</h2></div>
+      <p>По заданию здесь: имя и фамилия, город и страна, фото, контакты, ссылки на соцсети, коротко о себе, какие услуги планируешь оказывать.</p>
+    </div>
+    <div class="body">
+      <div class="cols c2">
+        <div class="slot r45"><p class="hint"><b>Сюда</b>портрет 4:5. Имя, город и контакты уже стоят на первом экране и в подвале</p></div>
+        <div>
+          <div class="slot doc"><p class="hint"><b>Сюда</b>5–7 предложений о себе от первого лица: откуда пришла в SMM, почему эксперты и практики, чем отличаешься. Текст напишешь ты или дашь тезисы</p></div>
+          <h3 class="gap draft">Услуги</h3>
+          <ul class="tags">
+            <li>Стратегия продвижения</li>
+            <li>Контент-план на месяц</li>
+            <li>Reels под ключ: идея, сценарий, монтаж</li>
+            <li>Нарезка эфиров и подкастов</li>
+            <li>Карусели и посты</li>
+            <li>Оформление профиля</li>
+            <li>Аналитика и отчёт</li>
+          </ul>
+          <p class="note">Список услуг собран по твоей работе с клиентом. Убери лишнее, добавь своё; сюда же можно поставить пакеты и цены из утверждённых предложений.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">2</span>
+      <div><h2>Образование и сертификаты</h2></div>
+      <p>По заданию здесь: диплом курса, сертификаты, другие обучения, дополнительные курсы.</p>
+    </div>
+    <div class="body">
+      <div class="cols c3">
+        <div class="card"><h3>Курс SMM</h3><p>Анастасия Шеремет, 2026</p><div class="slot wide gap"><p class="hint"><b>Сюда</b>скан диплома после сдачи</p></div></div>
+        <div class="card"><h3 class="draft">Бренд-маркетинг</h3><p>Название школы и год</p><div class="slot wide gap"><p class="hint"><b>Сюда</b>сертификат, если есть</p></div></div>
+        <div class="card"><h3 class="draft">Воронки, прогревы, продажи</h3><p>Название школы и год</p><div class="slot wide gap"><p class="hint"><b>Сюда</b>сертификат, если есть</p></div></div>
+        <div class="card"><h3 class="draft">Марафон по Reels «Магия продвижения»</h3><p>Ксения Дейч, 2026</p></div>
+        <div class="card"><h3 class="draft">Юриспруденция и политология</h3><p>Вуз и годы — впиши</p></div>
+        <div class="card"><h3>Ещё обучение</h3><p>Интенсивы, клубы по ИИ и всё, что считаешь нужным показать</p></div>
+      </div>
+      <p class="note">Карточки помечены «черновик», пока ты не подтвердишь названия и годы.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">3</span>
+      <div><h2>Мои навыки</h2></div>
+      <p>По заданию здесь: что умеешь после обучения. Светлые — из списка курса, сиреневые — твои собственные, их курс просит добавить обязательно.</p>
+    </div>
+    <div class="body">
+      <ul class="tags">
+        <li>Анализ целевой аудитории</li>
+        <li>Анализ конкурентов</li>
+        <li>SWOT-анализ</li>
+        <li>Контент-стратегия</li>
+        <li>Контент-план</li>
+        <li>Тексты и описания</li>
+        <li>Stories</li>
+        <li>Reels</li>
+        <li>Canva, Figma</li>
+        <li>Оформление профиля</li>
+        <li>Воронки продаж</li>
+        <li>Базовая аналитика</li>
+        <li class="own">Монтаж в CapCut</li>
+        <li class="own">Нарезка эфиров по монтажному листу</li>
+        <li class="own">Работа с нейросетями в производстве контента</li>
+        <li class="own">Решения по статистике: что и когда публиковать</li>
+        <li class="own">Прогревы и запуски</li>
+        <li class="own">Сайты на WordPress</li>
+      </ul>
+      <p class="note">Сиреневые навыки — черновик по тому, что ты реально делаешь. Проверь и дополни.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ЧАСТЬ 2 -->
+<div class="part"><div class="wrap"><p>Часть 2. Практическая работа<small>Разделы 4–13 задания, собранные в кейсы, как советует куратор</small></p></div></div>
+
+<section id="case1">
+  <div class="wrap">
+    <p class="case-title">Кейс 1. Эксперт по теме счастья, коуч</p>
+    <dl class="case-meta">
+      <div><dt>Ниша</dt><dd>личностный рост</dd></div>
+      <div><dt>Срок работы</dt><dd>с сентября 2026</dd></div>
+      <div><dt>Лучший ролик</dt><dd>68 тыс. просмотров</dd></div>
+      <div><dt>Задача</dt><dd>новые подписчики</dd></div>
+    </dl>
+    <p class="note">Кейс идёт без имени клиента. Цифры в шапке кейса — три-четыре самых сильных; подберём по статистике.</p>
+    <div class="slot wide gap" style="max-height:420px;width:100%"><p class="hint"><b>Сюда</b>большой кадр проекта: коллаж из роликов или скриншот профиля «до и после»</p></div>
+  </div>
+</section>
+
+<section id="s4">
+  <div class="wrap">
+    <div class="head"><span class="num">4</span><div><h2>Анализ целевой аудитории</h2></div><p>По заданию: домашняя работа по анализу ЦА.</p></div>
+    <div class="body">
+      <div class="cols c3">
+        <div class="card"><h3>Сегмент 1</h3><p>Кто, боль, желание, повод купить</p></div>
+        <div class="card"><h3>Сегмент 2</h3><p>Кто, боль, желание, повод купить</p></div>
+        <div class="card"><h3>Сегмент 3</h3><p>Кто, боль, желание, повод купить</p></div>
+      </div>
+      <div class="slot doc gap"><p class="hint"><b>Сюда</b>твоя домашка по ЦА (5WHY, портрет по 7 критериям). На странице показываем 2–4 сегмента карточками, полный документ даём ссылкой или раскрывающимся блоком</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="s5">
+  <div class="wrap">
+    <div class="head"><span class="num">5</span><div><h2>Анализ конкурентов</h2></div><p>По заданию: домашняя работа по анализу конкурентов.</p></div>
+    <div class="body">
+      <div class="slot doc"><p class="hint"><b>Сюда</b>таблица конкурентов по 9 блокам: продукт, цены, ЦА, визуал, контент, сторис и Reels, вовлечение, сильные и слабые стороны. На странице — 3–4 конкурента в сравнительной таблице и короткий вывод, что берём себе</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="s6">
+  <div class="wrap">
+    <div class="head"><span class="num">6</span><div><h2>SWOT-анализ</h2></div><p>По заданию: домашняя работа по SWOT.</p></div>
+    <div class="body">
+      <div class="cols c2">
+        <div class="card"><h3>Сильные стороны</h3><p>3–5 пунктов из домашки</p></div>
+        <div class="card"><h3>Слабые стороны</h3><p>3–5 пунктов из домашки</p></div>
+        <div class="card"><h3>Возможности</h3><p>3–5 пунктов из домашки</p></div>
+        <div class="card"><h3>Угрозы</h3><p>3–5 пунктов из домашки</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s7">
+  <div class="wrap">
+    <div class="head"><span class="num">7</span><div><h2>Стратегия продвижения</h2></div><p>По заданию: пример готовой стратегии.</p></div>
+    <div class="body">
+      <div class="cols c3">
+        <div class="card"><h3>Цель по SMART</h3><p>Одна формулировка с цифрой и сроком</p></div>
+        <div class="card"><h3>Big Idea</h3><p>Желание аудитории и наше решение</p></div>
+        <div class="card"><h3>Tone of Voice</h3><p>Как говорим и чего не говорим</p></div>
+      </div>
+      <div class="slot doc gap"><p class="hint"><b>Сюда</b>схема стратегии: рубрики, ритм публикаций по дням недели, роль развлекательных и экспертных роликов, путь зрителя до заявки. Материал есть в проекте, оформлю схемой</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="s8">
+  <div class="wrap">
+    <div class="head"><span class="num">8</span><div><h2>Контент-план</h2></div><p>По заданию: домашняя работа по контент-плану.</p></div>
+    <div class="body">
+      <div class="slot wide"><p class="hint"><b>Сюда</b>одна неделя контент-плана красивой таблицей (день, формат, тема, цель) и ссылка на полный план в Google Таблице</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="s9">
+  <div class="wrap">
+    <div class="head"><span class="num">9</span><div><h2>Примеры текстов</h2></div><p>По заданию: пример написания постов.</p></div>
+    <div class="body">
+      <div class="cols c3">
+        <div class="slot doc"><p class="hint"><b>Сюда</b>пост 1: экспертный</p></div>
+        <div class="slot doc"><p class="hint"><b>Сюда</b>пост 2: продающий или прогревающий</p></div>
+        <div class="slot doc"><p class="hint"><b>Сюда</b>пост 3: описание под Reels с призывом</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s10">
+  <div class="wrap">
+    <div class="head"><span class="num">10</span><div><h2>Stories</h2></div><p>По заданию: примеры оформления сторис.</p></div>
+    <div class="body">
+      <div class="cols c5">
+        <div class="slot r916"><p class="hint"><b>Сюда</b>сторис 1</p></div>
+        <div class="slot r916"><p class="hint"><b>Сюда</b>сторис 2</p></div>
+        <div class="slot r916"><p class="hint"><b>Сюда</b>сторис 3</p></div>
+        <div class="slot r916"><p class="hint"><b>Сюда</b>сторис 4</p></div>
+        <div class="slot r916"><p class="hint"><b>Сюда</b>сторис 5</p></div>
+      </div>
+      <p class="note">Лучше показать связку из 4–5 сторис одной серии (например, прогрев), чем пять разрозненных.</p>
+    </div>
+  </div>
+</section>
+
+<section id="s11">
+  <div class="wrap">
+    <div class="head"><span class="num">11</span><div><h2>Карусель</h2></div><p>По заданию: примеры оформления каруселей. Листается вбок, как в Instagram.</p></div>
+    <div class="body">
+      <div class="scroller">
+        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 1, обложка</p></div>
+        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 2</p></div>
+        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 3</p></div>
+        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 4</p></div>
+        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 5</p></div>
+        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 6, призыв</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s12">
+  <div class="wrap">
+    <div class="head"><span class="num">12</span><div><h2>Визуал</h2></div><p>По заданию: примеры оформления визуала.</p></div>
+    <div class="body">
+      <div class="cols c2">
+        <div>
+          <div class="feed">
+            <div class="slot r45"></div><div class="slot r45"></div><div class="slot r45"></div>
+            <div class="slot r45"></div><div class="slot r45"></div><div class="slot r45"></div>
+            <div class="slot r45"></div><div class="slot r45"></div><div class="slot r45"></div>
+          </div>
+          <p class="note">Сюда: сетка профиля из 9 обложек.</p>
+        </div>
+        <div class="cols">
+          <div class="card"><h3>Шрифты и цвета</h3><p>Заголовочный шрифт, цвет заголовков, правила размера</p></div>
+          <div class="card"><h3>Обложки</h3><p>Единая обложка серии и как на неё ставится заголовок ролика</p></div>
+          <div class="card"><h3>Правила кадра</h3><p>Где стоит заголовок, где субтитры, что не перекрываем</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s13">
+  <div class="wrap">
+    <div class="head"><span class="num">13</span><div><h2>Reels</h2></div><p>По заданию: 3–5 сценариев или ссылки на готовые видео. Ролики будут играть прямо на странице.</p></div>
+    <div class="body">
+      <div class="cols c5">
+        <div class="slot r916"><p class="hint"><b>Сюда</b>ролик 1, самый сильный, с цифрой просмотров</p></div>
+        <div class="slot r916"><p class="hint"><b>Сюда</b>ролик 2, развлекательный тест</p></div>
+        <div class="slot r916"><p class="hint"><b>Сюда</b>ролик 3, экспертный</p></div>
+        <div class="slot r916"><p class="hint"><b>Сюда</b>ролик 4, отзыв</p></div>
+        <div class="slot r916"><p class="hint"><b>Сюда</b>ролик 5, нарезка эфира</p></div>
+      </div>
+      <p class="note">Под каждым роликом: формат, задача, просмотры. Мне нужны ссылки на ролики в Instagram или сами файлы.</p>
+    </div>
+  </div>
+</section>
+
+<section id="case2">
+  <div class="wrap">
+    <p class="case-title">Кейс 2 и кейс 3</p>
+    <p class="lead">Короткие кейсы под одну задачу, чтобы показать другие ниши и навыки.</p>
+    <div class="cols c2 gap">
+      <div class="card"><h3>Кейс 2</h3><p>Ниша и задача</p><div class="cols c3 gap"><div class="slot r916"></div><div class="slot r916"></div><div class="slot r916"></div></div><p class="note">Сюда: второй клиент или твой собственный проект — 3 работы одного типа.</p></div>
+      <div class="card"><h3>Кейс 3</h3><p>Ниша и задача</p><div class="cols c3 gap"><div class="slot r916"></div><div class="slot r916"></div><div class="slot r916"></div></div><p class="note">Сюда: одно направление, например только идеи и сценарии Reels. Если показывать нечего, блок уберём.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ЧАСТЬ 3 -->
+<div class="part"><div class="wrap"><p>Часть 3. Поиск клиентов<small>Сдаётся Google Таблицей со скриншотами; на сайте — итог и ссылка</small></p></div></div>
+
+<section id="clients">
+  <div class="wrap">
+    <div class="head">
+      <span class="num">→</span>
+      <div><h2>Мой план поиска клиентов</h2></div>
+      <p>По заданию: что уже сделано для поиска клиентов, с цифрами и скриншотами.</p>
+    </div>
+    <div class="body">
+      <ul class="steps">
+        <li><b>✓</b><span>Подготовила коммерческие предложения с пакетами и ценами</span></li>
+        <li><b>✓</b><span>Собрала портфолио-сайт</span></li>
+        <li><b>3–4</b><span>сообщения в профильном чате</span></li>
+        <li><b>1</b><span>созвон и клиент в первый же день</span></li>
+        <li><b>__</b><span>сообщений потенциальным клиентам</span></li>
+        <li><b>__</b><span>аудитов страниц</span></li>
+        <li><b>__</b><span>экспертных Stories и Reels у себя</span></li>
+        <li><b>__</b><span>экспертных комментариев и чатов</span></li>
+      </ul>
+      <p class="note">Верхние четыре строки — то, что ты уже сделала (уточни точное число сообщений). Нижние заполняем по мере действий за эти две недели.</p>
+      <div class="cols c4 gap">
+        <div class="slot r916"><p class="hint"><b>Сюда</b>скриншот сообщения в чате</p></div>
+        <div class="slot r916"><p class="hint"><b>Сюда</b>скриншот ответа клиента</p></div>
+        <div class="slot r916"><p class="hint"><b>Сюда</b>скриншот предложения</p></div>
+        <div class="slot r916"><p class="hint"><b>Сюда</b>скриншот оформленного профиля</p></div>
+      </div>
+      <p class="gap"><a class="btn" href="#">Открыть таблицу поиска клиентов</a></p>
+      <p class="note">Кнопка поведёт на Google Таблицу: дата, действие, кому, результат, скриншот.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contacts">
+  <div class="wrap">
+    <h2>Напишите мне</h2>
+    <div class="links">
+      <a class="btn" href="#">Telegram</a>
+      <a class="btn ghost" href="#">Instagram</a>
+      <a class="btn ghost" href="#">Почта</a>
+    </div>
+    <p class="hint"><b>Сюда</b>твои ссылки: Telegram, Instagram, почта для заказов. Пока кнопки никуда не ведут.</p>
+  </div>
+</footer>
+
+<script>
+  const btn=document.getElementById('toggle');
+  btn.addEventListener('click',()=>{
+    const clean=document.body.classList.toggle('clean');
+    btn.setAttribute('aria-pressed',String(!clean));
+  });
+</script>
+</body>
+</html>
