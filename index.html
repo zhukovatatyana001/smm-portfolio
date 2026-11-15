@@ -1,505 +1,504 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="elegant">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Татьяна Жукова — портфолио SMM-специалиста</title>
 <meta name="description" content="Портфолио SMM-специалиста: стратегия, контент-план, Reels, карусели и кейсы.">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-  @font-face{font-family:"Unbounded";src:url("fonts/unbounded-cyrillic-wght-normal.woff2") format("woff2");font-weight:200 900;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
-  @font-face{font-family:"Unbounded";src:url("fonts/unbounded-latin-wght-normal.woff2") format("woff2");font-weight:200 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
-  @font-face{font-family:"Onest";src:url("fonts/onest-cyrillic-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
-  @font-face{font-family:"Onest";src:url("fonts/onest-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
-  :root{
-    --paper:#F6F7FB;
-    --white:#FFFFFF;
-    --ink:#151833;
-    --ink-soft:#5A5E7A;
-    --ultra:#3538E0;
-    --haze:#DDE0FA;
-    --blush:#F3C9BE;
-    --line:rgba(21,24,51,.12);
-    --display:"Unbounded",system-ui,sans-serif;
-    --text:"Onest",system-ui,sans-serif;
-    --wrap:1180px;
-    --pad:clamp(20px,5vw,56px);
-  }
+  @font-face{font-family:"Sofia Cond";src:url("fonts/sofia-sans-extra-condensed-cyrillic-wght-normal.woff2") format("woff2");font-weight:100 1000;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+  @font-face{font-family:"Sofia Cond";src:url("fonts/sofia-sans-extra-condensed-latin-wght-normal.woff2") format("woff2");font-weight:100 1000;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+  @font-face{font-family:"Marck";src:url("fonts/marck-script-cyrillic-400-normal.woff2") format("woff2");font-weight:400;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+  @font-face{font-family:"Marck";src:url("fonts/marck-script-latin-400-normal.woff2") format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122}
+  @font-face{font-family:"Manrope";src:url("fonts/manrope-cyrillic-wght-normal.woff2") format("woff2");font-weight:200 800;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+  @font-face{font-family:"Manrope";src:url("fonts/manrope-latin-wght-normal.woff2") format("woff2");font-weight:200 800;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212}
+
+  /* три палитры из присланных картинок */
+  :root,[data-theme="elegant"]{--bg:#EEE5D3;--dark:#222052;--ink:#15143A;--on-dark:#EEE5D3;--accent:#D2B68A;--soft:#B7B7B7;--card:#F7F1E4}
+  [data-theme="rose"]{--bg:#F1EDEA;--dark:#23314A;--ink:#1B2740;--on-dark:#F4EFEC;--accent:#DB8084;--soft:#8FA1B1;--card:#FBF8F6}
+  [data-theme="bordo"]{--bg:#EFE9DE;--dark:#4A0012;--ink:#3A000E;--on-dark:#EFE9DE;--accent:#BDD7EE;--soft:#B98F93;--card:#F8F4EC}
+
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--paper);color:var(--ink);font-family:var(--text);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  body{background:var(--dark);color:var(--ink);font-family:"Manrope",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .5s}
   a{color:inherit}
-  a:focus-visible,button:focus-visible{outline:2px solid var(--ultra);outline-offset:3px;border-radius:4px}
-  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+  .cond{font-family:"Sofia Cond","Arial Narrow",sans-serif;font-weight:900;text-transform:uppercase;line-height:.84;letter-spacing:-.01em}
+  .script{font-family:"Marck",cursive;font-weight:400;text-transform:none;letter-spacing:0;color:var(--accent);font-style:normal;display:inline-block;transform:rotate(-5deg) translateY(-.08em);line-height:1}
 
-  /* шапка */
-  .top{position:sticky;top:0;z-index:20;background:rgba(246,247,251,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-  .top .wrap{display:flex;align-items:center;gap:28px;height:64px}
-  .logo{font-family:var(--display);font-weight:300;font-size:15px;text-decoration:none;white-space:nowrap}
-  .nav{display:flex;gap:22px;margin-left:auto;font-size:15px}
-  .nav a{text-decoration:none;color:var(--ink-soft)}
-  .nav a:hover{color:var(--ultra)}
-  .toggle{display:flex;align-items:center;gap:10px;font:inherit;font-size:14px;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:999px;padding:7px 14px 7px 8px;cursor:pointer;white-space:nowrap}
-  .toggle i{width:30px;height:18px;border-radius:999px;background:var(--ultra);position:relative;transition:background .2s}
-  .toggle i::after{content:"";position:absolute;top:2px;left:14px;width:14px;height:14px;border-radius:50%;background:#fff;transition:left .2s}
-  body.clean .toggle i{background:#C5C8D8}
-  body.clean .toggle i::after{left:2px}
+  /* плавающее меню */
+  .nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(16px);box-shadow:0 10px 40px rgba(0,0,0,.18);max-width:calc(100vw - 24px)}
+  .nav a{font-size:14px;font-weight:600;text-decoration:none;color:var(--ink);padding:9px 15px;border-radius:999px;white-space:nowrap;transition:background .25s,color .25s}
+  .nav a:hover,.nav a.on{background:var(--dark);color:var(--on-dark)}
+  .nav button{font:inherit;font-size:13px;font-weight:700;border:0;cursor:pointer;border-radius:999px;padding:9px 14px;background:var(--accent);color:var(--ink);white-space:nowrap}
+  .nav button.ghost{background:transparent;border:1px solid color-mix(in srgb,var(--ink) 35%,transparent)}
+
+  /* панели-«слайды» */
+  .panel{position:relative;padding:clamp(56px,7vw,110px) clamp(20px,5vw,72px);overflow:hidden;transition:background .5s,color .5s}
+  .panel.light{background:var(--bg);color:var(--ink)}
+  .panel.dark{background:var(--dark);color:var(--on-dark)}
+  .panel.accent{background:var(--accent);color:var(--ink)}
+  .in-wrap{max-width:1280px;margin:0 auto;position:relative}
+  .bar{display:flex;justify-content:space-between;gap:16px;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.75;margin-bottom:clamp(20px,3vw,40px)}
+  .giant{font-size:clamp(64px,13.5vw,210px)}
+  .giant .script{font-size:.5em;margin-left:-.12em}
+  .task{max-width:44em;margin-top:18px;opacity:.82}
+  .body{margin-top:clamp(28px,4vw,56px)}
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .card{border-radius:20px;padding:26px;background:var(--card);color:var(--ink)}
+  .dark .card{background:color-mix(in srgb,var(--on-dark) 9%,transparent);color:var(--on-dark);border:1px solid color-mix(in srgb,var(--on-dark) 18%,transparent)}
+  .card.hot{background:var(--accent);color:var(--ink);border:0}
+  .card h3{font-family:"Sofia Cond",sans-serif;font-weight:800;text-transform:uppercase;font-size:34px;line-height:.95;margin-bottom:10px}
+  .card p{font-size:15.5px;opacity:.85}
+  .gap{margin-top:20px}
 
   /* первый экран */
-  .hero{padding:clamp(48px,9vw,120px) 0 clamp(56px,8vw,110px)}
-  .hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,72px);align-items:center}
-  h1{font-family:var(--display);font-weight:200;font-size:clamp(38px,6.6vw,92px);line-height:1.02;overflow-wrap:anywhere;letter-spacing:-.035em}
-  .lead{margin-top:28px;max-width:30em;font-size:clamp(18px,1.6vw,21px);color:var(--ink-soft)}
-  .facts{margin-top:32px;display:flex;flex-wrap:wrap;gap:10px 28px;font-size:15px}
-  .facts span{color:var(--ink-soft)}
-  .cta{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px}
-  .btn{display:inline-block;text-decoration:none;font-weight:500;font-size:16px;padding:14px 26px;border-radius:999px;background:var(--ink);color:#fff}
-  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
-  .btn:hover{background:var(--ultra);border-color:var(--ultra);color:#fff}
-  .screens{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
-  .screens .slot{border-radius:22px}
-  .screens .slot:nth-child(1){margin-top:64px;background:var(--haze)}
-  .screens .slot:nth-child(2){background:var(--ink)}
-  .screens .slot:nth-child(2) .hint{color:#fff}
-  .screens .slot:nth-child(3){margin-top:112px;background:var(--ultra)}
-  .screens .slot:nth-child(3) .hint{color:#fff}
+  .hero{min-height:100vh;padding-top:96px;padding-bottom:0;display:flex;flex-direction:column}
+  .hero .in-wrap{flex:1;display:flex;flex-direction:column;width:100%}
+  .hero-top{display:flex;justify-content:space-between;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .word{position:relative;margin-top:clamp(8px,2vw,28px);font-size:clamp(84px,21.5vw,330px);text-align:center;white-space:nowrap;line-height:.8;color:var(--dark);will-change:transform}
+  .word span{display:inline-block}
+  .js .word span{opacity:0;transform:translateY(.35em);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*55ms + 150ms)}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .whose{position:absolute;left:1%;top:-.28em;font-size:.2em;z-index:3}
+  .js .whose{opacity:0;animation:rise .9s .9s forwards}
+  .stage{position:relative;flex:1;min-height:300px;margin-top:calc(-1*clamp(40px,9vw,150px));display:grid;grid-template-columns:1fr minmax(220px,28vw) 1fr;align-items:end;gap:24px;padding-bottom:28px}
+  .stage .me{position:relative;z-index:2;aspect-ratio:3/4.3;border-radius:999px 999px 0 0;margin-bottom:-28px;background:var(--accent);display:flex;align-items:flex-end;justify-content:center;overflow:hidden;min-height:0}
+  .me img{width:100%;height:100%;object-fit:cover}
+  .hero-l{align-self:end;max-width:24em;font-size:clamp(16px,1.35vw,20px)}
+  .hero-r{align-self:end;justify-self:end;text-align:right;font-size:15px}
+  .hero-r a{display:block;text-decoration:none;font-weight:700;padding:3px 0}
+  .hero-r a:hover{color:var(--dark);text-decoration:underline}
+  .chip{position:absolute;z-index:4;background:var(--card);color:var(--ink);border-radius:16px;padding:12px 16px;font-size:13.5px;line-height:1.3;box-shadow:0 14px 40px rgba(0,0,0,.16);animation:float 6s ease-in-out infinite}
+  .chip b{display:block;font-family:"Sofia Cond",sans-serif;font-weight:900;font-size:30px;line-height:1}
+  .chip.c1{right:calc(50% + 11vw);top:38%}.chip.c2{left:calc(50% + 12vw);top:30%;animation-delay:-2s}.chip.c3{left:calc(50% + 10vw);bottom:30%;animation-delay:-4s}
+  @keyframes float{50%{transform:translateY(-12px)}}
 
-  /* секции */
-  section{padding:clamp(56px,8vw,112px) 0;border-top:1px solid var(--line)}
-  .part{background:var(--ink);color:#fff;border:0;padding:clamp(40px,6vw,72px) 0}
-  .part p{font-family:var(--display);font-weight:200;font-size:clamp(26px,4.4vw,56px);line-height:1.1;letter-spacing:-.02em}
-  .part small{display:block;margin-top:14px;font-family:var(--text);font-size:16px;color:#B9BDE0;letter-spacing:0}
-  .head{display:grid;grid-template-columns:minmax(0,90px) minmax(0,1fr);gap:20px;align-items:baseline;margin-bottom:40px}
-  .num{font-family:var(--display);font-weight:200;font-size:clamp(32px,4vw,52px);color:var(--ultra);line-height:1}
-  h2{font-family:var(--display);font-weight:300;font-size:clamp(26px,3.4vw,42px);line-height:1.12;letter-spacing:-.02em}
-  .head p{grid-column:2;margin-top:10px;color:var(--ink-soft);max-width:38em}
-  h3{font-weight:600;font-size:18px;margin-bottom:8px}
-  .body{margin-left:110px}
-  .cols{display:grid;gap:18px}
-  .c2{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .c3{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .c4{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .c5{grid-template-columns:repeat(5,minmax(0,1fr))}
-  .card{background:var(--white);border-radius:18px;padding:26px}
-  .card p{color:var(--ink-soft);font-size:16px}
-  .tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
-  .tags li{background:var(--white);border-radius:999px;padding:10px 18px;font-size:16px}
-  .tags li.own{background:var(--haze)}
-  .gap{margin-top:22px}
+  /* бегущая лента */
+  .ticker{background:var(--dark);color:var(--on-dark);padding:18px 0;overflow:hidden;border-top:1px solid color-mix(in srgb,var(--on-dark) 20%,transparent);border-bottom:1px solid color-mix(in srgb,var(--on-dark) 20%,transparent)}
+  .ticker div{display:flex;gap:14px;width:max-content;animation:run 38s linear infinite}
+  .ticker span{border:1px solid color-mix(in srgb,var(--on-dark) 35%,transparent);border-radius:999px;padding:9px 20px;font-size:15px;font-weight:600;white-space:nowrap}
+  .ticker span.own{background:var(--accent);color:var(--ink);border-color:transparent}
+  @keyframes run{to{transform:translateX(-50%)}}
+  .ghost-run{position:absolute;left:0;right:0;bottom:-.12em;white-space:nowrap;font-size:clamp(90px,17vw,260px);color:transparent;-webkit-text-stroke:1.5px color-mix(in srgb,currentColor 30%,transparent);pointer-events:none}
+  .ghost-run div{display:inline-block;animation:run 46s linear infinite}
 
   /* места под материалы */
-  .slot{position:relative;background:var(--haze);border-radius:16px;display:flex;align-items:flex-end;min-height:120px;overflow:hidden;outline:1.5px dashed rgba(53,56,224,.55);outline-offset:-1.5px}
-  .slot.r916{aspect-ratio:9/16;min-height:0}
-  .slot.r45{aspect-ratio:4/5;min-height:0}
-  .slot.r11{aspect-ratio:1/1;min-height:0}
-  .slot.wide{aspect-ratio:16/9;min-height:0}
-  .slot.doc{min-height:200px}
-  .hint{padding:16px 18px;font-size:14px;line-height:1.45;color:var(--ink)}
-  .hint b{display:block;font-weight:600;color:var(--ultra)}
-  .slot:nth-child(n) .hint b{color:inherit;opacity:.72}
-  .note{margin-top:14px;font-size:14px;color:var(--ultra)}
-  .draft::after{content:"черновик";margin-left:10px;font-family:var(--text);font-size:12px;font-weight:500;letter-spacing:0;color:var(--ultra);background:var(--haze);border-radius:999px;padding:3px 10px;vertical-align:middle;white-space:nowrap}
-  body.clean .hint,body.clean .note{display:none}
+  .slot{position:relative;border-radius:18px;min-height:130px;display:flex;align-items:flex-end;overflow:hidden;background:color-mix(in srgb,var(--ink) 9%,transparent);outline:1.5px dashed color-mix(in srgb,currentColor 55%,transparent);outline-offset:-1.5px}
+  .dark .slot{background:color-mix(in srgb,var(--on-dark) 10%,transparent)}
+  .r916{aspect-ratio:9/16;min-height:0}.r45{aspect-ratio:4/5;min-height:0}.wide{aspect-ratio:16/9;min-height:0}.doc{min-height:210px}
+  .hint{padding:14px 16px;font-size:13.5px;line-height:1.4}
+  .hint b{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:11.5px;opacity:.7}
+  .note{margin-top:14px;font-size:13.5px;font-weight:600;color:var(--accent)}
+  .light .note{color:color-mix(in srgb,var(--dark) 80%,var(--accent))}
+  body.clean .hint,body.clean .note,body.clean .draft::after{display:none}
   body.clean .slot{outline:0}
-  body.clean .draft::after{display:none}
+  .draft::after{content:"черновик";margin-left:10px;font-family:"Manrope",sans-serif;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:none;background:var(--accent);color:var(--ink);border-radius:999px;padding:3px 9px;vertical-align:middle;white-space:nowrap}
 
-  .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-width:420px}
-  .feed .slot{border-radius:6px;min-height:0;outline-width:1px}
-  .scroller{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(210px,1fr);gap:14px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
+  /* телефоны для Reels и Stories */
+  .phone{border-radius:34px;padding:8px;background:var(--ink);box-shadow:0 24px 50px rgba(0,0,0,.28);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+  .dark .phone{background:var(--on-dark)}
+  .phone:hover{transform:translateY(-12px) rotate(-1.5deg)}
+  .phone .slot{border-radius:27px;outline:0;background:var(--accent);color:var(--ink)}
+  .dark .phone .slot{background:var(--dark);color:var(--on-dark)}
+  .phones{align-items:end}
+  .phones .phone:nth-child(even){margin-bottom:34px}
+  .cap{margin-top:12px;font-size:13.5px;font-weight:600;text-align:center;opacity:.85}
+
+  .tags{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
+  .tags li{border-radius:999px;padding:10px 18px;font-size:15.5px;font-weight:600;border:1px solid color-mix(in srgb,currentColor 35%,transparent)}
+  .tags li.own{background:var(--accent);color:var(--ink);border-color:transparent}
+  .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;max-width:440px}
+  .feed i{aspect-ratio:4/5;border-radius:4px}
+  .feed i:nth-child(3n+1){background:var(--dark)}.feed i:nth-child(3n+2){background:var(--accent)}.feed i:nth-child(3n){background:var(--soft)}
+  .feed i:nth-child(4),.feed i:nth-child(8){background:var(--card)}
+  .hl{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+  .hl i{width:76px;height:76px;border-radius:50%;background:var(--dark);outline:2px solid var(--accent);outline-offset:3px}
+  .hl i:nth-child(even){background:var(--accent)}
+  .scroller{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:14px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory}
   .scroller .slot{scroll-snap-align:start}
 
-  /* кейсы */
-  .case-title{font-family:var(--display);font-weight:200;font-size:clamp(34px,6vw,84px);line-height:1;letter-spacing:-.03em}
-  .case-meta{margin-top:22px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-  .case-meta div{border-top:1px solid var(--ink);padding-top:14px}
-  .case-meta dt{font-size:14px;color:var(--ink-soft)}
-  .case-meta dd{font-family:var(--display);font-weight:300;font-size:clamp(20px,2.4vw,30px);margin-top:4px}
+  /* цифры в кругах */
+  .nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:36px}
+  .nums div{aspect-ratio:1;border-radius:50%;background:var(--card);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14%;box-shadow:0 18px 50px rgba(0,0,0,.2)}
+  .nums b{font-family:"Sofia Cond",sans-serif;font-weight:900;font-size:clamp(44px,6.5vw,104px);line-height:.9}
+  .nums span{font-size:clamp(12px,1.05vw,15px);font-weight:600;margin-top:6px}
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 44px}
+  .steps li{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid color-mix(in srgb,currentColor 22%,transparent)}
+  .steps b{font-family:"Sofia Cond",sans-serif;font-weight:900;font-size:54px;line-height:1;color:var(--accent)}
+  .light .steps b{color:var(--dark)}
+  .btn{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;font-size:16px;padding:8px 8px 8px 24px;border-radius:999px;background:var(--accent);color:var(--ink);transition:transform .25s}
+  .btn::after{content:"↗";display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--bg);transition:transform .3s}
+  .btn:hover{transform:translateY(-3px)}.btn:hover::after{transform:rotate(45deg)}
+  .contacts{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
 
-  /* поиск клиентов */
-  .steps{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
-  .steps li{display:grid;grid-template-columns:84px 1fr;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line)}
-  .steps b{font-family:var(--display);font-weight:300;font-size:28px;color:var(--ultra)}
+  /* кольцо прогресса */
+  .ring{position:fixed;right:22px;bottom:22px;z-index:50;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;text-decoration:none;font-weight:800;color:var(--ink);background:conic-gradient(var(--accent) calc(var(--p,0)*1%),color-mix(in srgb,var(--bg) 85%,var(--ink)) 0);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  .ring::before{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--bg)}
+  .ring span{position:relative}
 
-  footer{background:var(--ink);color:#fff;padding:clamp(56px,8vw,104px) 0}
-  footer h2{font-weight:200;font-size:clamp(32px,6vw,76px)}
-  footer .links{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
-  footer .btn{background:#fff;color:var(--ink)}
-  footer .btn.ghost{background:transparent;color:#fff;border-color:#fff}
-  footer .hint{color:#B9BDE0;padding:18px 0 0}
+  /* проявление из размытия */
+  .js .rv{opacity:0;filter:blur(14px);transform:translateY(30px);transition:opacity .8s,filter .8s,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--d,0)*90ms)}
+  .js .rv.in{opacity:1;filter:none;transform:none}
 
-  @media (max-width:900px){
-    .nav{display:none}
-    .toggle{margin-left:auto}
-    .hero .wrap{grid-template-columns:1fr}
-    .head{grid-template-columns:1fr;gap:6px}
-    .head p{grid-column:1}
-    .body{margin-left:0}
-    .c3,.c4,.c5{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .case-meta{grid-template-columns:repeat(2,minmax(0,1fr))}
+  @media (max-width:980px){
+    .nav a{display:none}
+    .g3,.g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .stage{grid-template-columns:1fr;margin-top:-40px}
+    .me{width:min(64vw,300px);justify-self:center;order:-1}
+    .hero-r{justify-self:start;text-align:left}
+    .chip.c1{left:4%;right:auto;top:8%}.chip.c2{left:auto;right:4%;top:30%}.chip.c3{display:none}
+    .nums{grid-template-columns:repeat(2,minmax(0,1fr))}
     .steps{grid-template-columns:1fr}
   }
-  @media (max-width:560px){
-    .c2{grid-template-columns:1fr}
-    .screens .slot:nth-child(1){margin-top:32px}
-    .screens .slot:nth-child(3){margin-top:56px}
+  @media (max-width:560px){.g2{grid-template-columns:1fr}.phones.g5,.phones.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .ticker div,.ghost-run div,.chip{animation:none}
+    .js .word span,.js .whose{animation:none;opacity:1;transform:none}
+    .js .rv{opacity:1;filter:none;transform:none;transition:none}
   }
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.toggle i,.toggle i::after{transition:none}}
 </style>
 </head>
 <body>
 
-<header class="top">
-  <div class="wrap">
-    <a class="logo" href="#top">Татьяна Жукова</a>
-    <nav class="nav" aria-label="Разделы">
-      <a href="#about">Обо мне</a>
-      <a href="#education">Образование</a>
-      <a href="#skills">Навыки</a>
-      <a href="#case1">Кейсы</a>
-      <a href="#clients">Поиск клиентов</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
-    <button class="toggle" id="toggle" type="button" aria-pressed="true"><i></i><span>Подсказки</span></button>
-  </div>
-</header>
+<nav class="nav" aria-label="Разделы">
+  <a href="#about">Обо мне</a>
+  <a href="#education">Образование</a>
+  <a href="#skills">Навыки</a>
+  <a href="#case1">Кейсы</a>
+  <a href="#clients">Поиск клиентов</a>
+  <a href="#contacts">Контакты</a>
+  <button id="pal" type="button">Палитра: Elegant</button>
+  <button id="toggle" class="ghost" type="button" aria-pressed="true">Подсказки: вкл</button>
+</nav>
 
 <main id="top">
 
 <!-- ПЕРВЫЙ ЭКРАН -->
-<div class="hero">
-  <div class="wrap">
-    <div>
-      <h1>Татьяна Жукова</h1>
-      <p class="lead draft">SMM для экспертов: стратегия, контент-план и Reels, которые досматривают и пересылают.</p>
-      <div class="facts">
-        <div><span>Где работаю</span><br>Германия, онлайн</div>
-        <div><span>С кем</span><br>эксперты, коучи, практики</div>
-        <div><span>На рынке</span><br>в онлайн-маркетинге с 2012 года</div>
-      </div>
-      <div class="cta">
-        <a class="btn" href="#case1">Смотреть кейсы</a>
-        <a class="btn ghost" href="#contacts">Написать мне</a>
-      </div>
+<header class="panel light hero">
+  <div class="in-wrap">
+    <div class="hero-top"><span>SMM-специалист</span><span>2026</span><span>Татьяна Жукова</span></div>
+    <div class="word cond" id="word" aria-label="Портфолио">
+      <em class="script whose">Татьяна Жукова</em>
+      <span style="--i:0">П</span><span style="--i:1">О</span><span style="--i:2">Р</span><span style="--i:3">Т</span><span style="--i:4">Ф</span><span style="--i:5">О</span><span style="--i:6">Л</span><span style="--i:7">И</span><span style="--i:8">О</span>
     </div>
-    <div class="screens" aria-hidden="true">
-      <div class="slot r916"><p class="hint"><b>Сюда</b>обложка или кадр лучшего ролика</p></div>
-      <div class="slot r916"><p class="hint"><b>Сюда</b>твоё фото, вертикальное, средний план</p></div>
-      <div class="slot r916"><p class="hint"><b>Сюда</b>ещё один ролик или карусель</p></div>
+    <div class="stage">
+      <p class="hero-l rv draft">Стратегия, контент-план и Reels для экспертов и коучей: ролики, которые досматривают и пересылают.</p>
+      <div class="me slot" style="outline-offset:-6px"><p class="hint" style="text-align:center"><b>Сюда</b>твоё фото в полный рост или по пояс, без фона (PNG). Голова перекроет буквы, как на твоих примерах</p></div>
+      <div class="hero-r rv" style="--d:2">
+        <a href="#">Telegram</a><a href="#">Instagram</a><a href="#">Почта</a>
+        <span style="opacity:.7">Германия, работаю онлайн</span>
+      </div>
+      <div class="chip c1"><b>68 тыс.</b>просмотров у лучшего ролика</div>
+      <div class="chip c2"><b>1 день</b>от первого сообщения до клиента</div>
+      <div class="chip c3"><b>с 2012</b>в онлайн-маркетинге</div>
     </div>
   </div>
-</div>
+</header>
 
-<!-- ЧАСТЬ 1 -->
-<div class="part"><div class="wrap"><p>Часть 1. Портфолио<small>Разделы 1–3 задания: знакомство, образование, навыки</small></p></div></div>
+<div class="ticker" aria-hidden="true"><div>
+  <span>Анализ аудитории</span><span class="own">Reels под ключ</span><span>Контент-стратегия</span><span>Контент-план</span><span class="own">Нарезка эфиров</span><span>Stories</span><span>Карусели</span><span class="own">Монтаж в CapCut</span><span>Аналитика</span><span>Прогревы</span><span class="own">Нейросети в контенте</span><span>Оформление профиля</span>
+  <span>Анализ аудитории</span><span class="own">Reels под ключ</span><span>Контент-стратегия</span><span>Контент-план</span><span class="own">Нарезка эфиров</span><span>Stories</span><span>Карусели</span><span class="own">Монтаж в CapCut</span><span>Аналитика</span><span>Прогревы</span><span class="own">Нейросети в контенте</span><span>Оформление профиля</span>
+</div></div>
 
-<section id="about">
-  <div class="wrap">
-    <div class="head">
-      <span class="num">1</span>
-      <div><h2>Знакомство со специалистом</h2></div>
-      <p>По заданию здесь: имя и фамилия, город и страна, фото, контакты, ссылки на соцсети, коротко о себе, какие услуги планируешь оказывать.</p>
-    </div>
-    <div class="body">
-      <div class="cols c2">
-        <div class="slot r45"><p class="hint"><b>Сюда</b>портрет 4:5. Имя, город и контакты уже стоят на первом экране и в подвале</p></div>
-        <div>
-          <div class="slot doc"><p class="hint"><b>Сюда</b>5–7 предложений о себе от первого лица: откуда пришла в SMM, почему эксперты и практики, чем отличаешься. Текст напишешь ты или дашь тезисы</p></div>
-          <h3 class="gap draft">Услуги</h3>
-          <ul class="tags">
-            <li>Стратегия продвижения</li>
-            <li>Контент-план на месяц</li>
-            <li>Reels под ключ: идея, сценарий, монтаж</li>
-            <li>Нарезка эфиров и подкастов</li>
-            <li>Карусели и посты</li>
-            <li>Оформление профиля</li>
-            <li>Аналитика и отчёт</li>
-          </ul>
-          <p class="note">Список услуг собран по твоей работе с клиентом. Убери лишнее, добавь своё; сюда же можно поставить пакеты и цены из утверждённых предложений.</p>
+<!-- 1 -->
+<section class="panel dark" id="about">
+  <div class="in-wrap">
+    <div class="bar"><span>Часть 1. Портфолио</span><span>Раздел 1 из 13</span></div>
+    <h2 class="giant cond rv">Обо <em class="script">мне</em></h2>
+    <p class="task rv">По заданию: имя и фамилия, город и страна, фото, контакты, ссылки на соцсети, коротко о себе, какие услуги планируешь оказывать.</p>
+    <div class="body grid g2">
+      <div class="slot r45 rv"><p class="hint"><b>Сюда</b>второй портрет, 4:5, средний план</p></div>
+      <div>
+        <div class="slot doc rv" style="--d:1"><p class="hint"><b>Сюда</b>5–7 предложений о себе от первого лица: как пришла в SMM, почему эксперты и практики, чем отличаешься. Напишешь сама или дашь тезисы</p></div>
+        <div class="grid g2 gap">
+          <div class="card rv" style="--d:1"><h3 class="draft">Стратегия</h3><p>Анализ, позиционирование, план продвижения</p></div>
+          <div class="card hot rv" style="--d:2"><h3 class="draft">Reels под ключ</h3><p>Идея, сценарий, монтаж, обложка</p></div>
+          <div class="card rv" style="--d:3"><h3 class="draft">Контент-план</h3><p>Рубрики и график на месяц</p></div>
+          <div class="card rv" style="--d:4"><h3 class="draft">Нарезка эфиров</h3><p>Из одной записи серия роликов</p></div>
         </div>
+        <p class="note">Услуги собраны по твоей реальной работе. Убери лишнее, добавь своё; сюда же встанут пакеты и цены из утверждённых предложений.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="education">
-  <div class="wrap">
-    <div class="head">
-      <span class="num">2</span>
-      <div><h2>Образование и сертификаты</h2></div>
-      <p>По заданию здесь: диплом курса, сертификаты, другие обучения, дополнительные курсы.</p>
+<!-- 2 -->
+<section class="panel light" id="education">
+  <div class="in-wrap">
+    <div class="bar"><span>Часть 1. Портфолио</span><span>Раздел 2 из 13</span></div>
+    <h2 class="giant cond rv">Образо<wbr>вание</h2>
+    <p class="task rv">По заданию: диплом курса, сертификаты, другие обучения, дополнительные курсы.</p>
+    <div class="body grid g3">
+      <div class="card rv"><h3>Курс SMM</h3><p>Анастасия Шеремет, 2026</p><div class="slot wide gap"><p class="hint"><b>Сюда</b>диплом после сдачи</p></div></div>
+      <div class="card rv" style="--d:1"><h3 class="draft">Бренд-маркетинг</h3><p>Школа и год</p><div class="slot wide gap"><p class="hint"><b>Сюда</b>сертификат</p></div></div>
+      <div class="card rv" style="--d:2"><h3 class="draft">Воронки и прогревы</h3><p>Школа и год</p><div class="slot wide gap"><p class="hint"><b>Сюда</b>сертификат</p></div></div>
+      <div class="card rv"><h3 class="draft">Марафон по Reels</h3><p>«Магия продвижения», Ксения Дейч, 2026</p></div>
+      <div class="card rv" style="--d:1"><h3 class="draft">Юриспруденция, политология</h3><p>Вуз и годы</p></div>
+      <div class="card rv" style="--d:2"><h3>Ещё обучение</h3><p>Интенсивы, клубы по ИИ и всё, что хочешь показать</p></div>
     </div>
-    <div class="body">
-      <div class="cols c3">
-        <div class="card"><h3>Курс SMM</h3><p>Анастасия Шеремет, 2026</p><div class="slot wide gap"><p class="hint"><b>Сюда</b>скан диплома после сдачи</p></div></div>
-        <div class="card"><h3 class="draft">Бренд-маркетинг</h3><p>Название школы и год</p><div class="slot wide gap"><p class="hint"><b>Сюда</b>сертификат, если есть</p></div></div>
-        <div class="card"><h3 class="draft">Воронки, прогревы, продажи</h3><p>Название школы и год</p><div class="slot wide gap"><p class="hint"><b>Сюда</b>сертификат, если есть</p></div></div>
-        <div class="card"><h3 class="draft">Марафон по Reels «Магия продвижения»</h3><p>Ксения Дейч, 2026</p></div>
-        <div class="card"><h3 class="draft">Юриспруденция и политология</h3><p>Вуз и годы — впиши</p></div>
-        <div class="card"><h3>Ещё обучение</h3><p>Интенсивы, клубы по ИИ и всё, что считаешь нужным показать</p></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="panel dark" id="skills">
+  <div class="in-wrap">
+    <div class="bar"><span>Часть 1. Портфолио</span><span>Раздел 3 из 13</span></div>
+    <h2 class="giant cond rv">Мои <em class="script">навыки</em></h2>
+    <p class="task rv">По заданию: что умеешь после обучения. Контурные — из списка курса, залитые — твои собственные, их курс просит добавить обязательно.</p>
+    <ul class="tags body rv">
+      <li>Анализ целевой аудитории</li><li>Анализ конкурентов</li><li>SWOT-анализ</li><li>Контент-стратегия</li><li>Контент-план</li><li>Тексты и описания</li><li>Stories</li><li>Reels</li><li>Canva, Figma</li><li>Оформление профиля</li><li>Воронки продаж</li><li>Базовая аналитика</li>
+      <li class="own">Монтаж в CapCut</li><li class="own">Нарезка эфиров по монтажному листу</li><li class="own">Нейросети в производстве контента</li><li class="own">Решения по статистике</li><li class="own">Прогревы и запуски</li><li class="own">Сайты на WordPress</li>
+    </ul>
+    <p class="note">Залитые навыки — черновик по тому, что ты реально делаешь. Проверь и дополни.</p>
+  </div>
+  <div class="ghost-run cond" aria-hidden="true"><div>стратегия reels контент аналитика стратегия reels контент аналитика&nbsp;</div></div>
+</section>
+
+<!-- КЕЙС 1 -->
+<section class="panel accent" id="case1">
+  <div class="in-wrap">
+    <div class="bar"><span>Часть 2. Практическая работа</span><span>Кейс 1</span></div>
+    <h2 class="giant cond rv">Кейс <em class="script" style="color:var(--dark)">первый</em></h2>
+    <p class="task rv" style="font-size:20px;font-weight:600">Эксперт по теме счастья, коуч. Личный бренд, Instagram.</p>
+    <div class="nums">
+      <div class="rv"><b data-count="68">0</b><span>тыс. просмотров у лучшего ролика</span></div>
+      <div class="rv" style="--d:1"><b data-count="2">0</b><span>ролика в день по графику</span></div>
+      <div class="rv" style="--d:2"><b data-count="3">0</b><span>месяца работы</span></div>
+      <div class="rv" style="--d:3"><b>__</b><span>новых подписчиков</span></div>
+    </div>
+    <p class="note" style="color:var(--dark)">Кейс идёт без имени клиента. Цифры в кругах поставим точные по статистике: мне нужны прирост подписчиков и суммарные просмотры.</p>
+  </div>
+</section>
+
+<section class="panel light" id="s4">
+  <div class="in-wrap">
+    <div class="bar"><span>Кейс 1</span><span>Раздел 4 из 13</span></div>
+    <h2 class="giant cond rv">Аудитория</h2>
+    <p class="task rv">По заданию: домашняя работа по анализу целевой аудитории.</p>
+    <div class="body grid g3">
+      <div class="card rv"><h3>Сегмент 1</h3><p>Кто, боль, желание, повод купить</p></div>
+      <div class="card rv" style="--d:1"><h3>Сегмент 2</h3><p>Кто, боль, желание, повод купить</p></div>
+      <div class="card rv" style="--d:2"><h3>Сегмент 3</h3><p>Кто, боль, желание, повод купить</p></div>
+    </div>
+    <div class="slot doc gap rv"><p class="hint"><b>Сюда</b>твоя домашка по ЦА (5WHY, портрет по 7 критериям). На странице — 2–4 сегмента с фото-образом, полный документ раскрывается по кнопке</p></div>
+  </div>
+</section>
+
+<section class="panel dark" id="s5">
+  <div class="in-wrap">
+    <div class="bar"><span>Кейс 1</span><span>Раздел 5 из 13</span></div>
+    <h2 class="giant cond rv">Конку<wbr>ренты</h2>
+    <p class="task rv">По заданию: домашняя работа по анализу конкурентов.</p>
+    <div class="body grid g3">
+      <div class="card rv"><div class="slot r45"><p class="hint"><b>Сюда</b>скрин профиля конкурента 1</p></div><p class="gap">Продукт, цены, контент, сильные и слабые стороны</p></div>
+      <div class="card rv" style="--d:1"><div class="slot r45"><p class="hint"><b>Сюда</b>скрин профиля конкурента 2</p></div><p class="gap">Продукт, цены, контент, сильные и слабые стороны</p></div>
+      <div class="card rv" style="--d:2"><div class="slot r45"><p class="hint"><b>Сюда</b>скрин профиля конкурента 3</p></div><p class="gap">Продукт, цены, контент, сильные и слабые стороны</p></div>
+    </div>
+    <p class="note">Данные возьму из твоей домашки по 9 блокам; внизу добавлю вывод, что забираем себе.</p>
+  </div>
+</section>
+
+<section class="panel light" id="s6">
+  <div class="in-wrap">
+    <div class="bar"><span>Кейс 1</span><span>Раздел 6 из 13</span></div>
+    <h2 class="giant cond rv">SWOT</h2>
+    <p class="task rv">По заданию: домашняя работа по SWOT-анализу.</p>
+    <div class="body grid g4">
+      <div class="card rv"><h3>Сильные стороны</h3><p>3–5 пунктов</p></div>
+      <div class="card rv" style="--d:1"><h3>Слабые стороны</h3><p>3–5 пунктов</p></div>
+      <div class="card hot rv" style="--d:2"><h3>Возмож<wbr>ности</h3><p>3–5 пунктов</p></div>
+      <div class="card rv" style="--d:3"><h3>Угрозы</h3><p>3–5 пунктов</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel dark" id="s7">
+  <div class="in-wrap">
+    <div class="bar"><span>Кейс 1</span><span>Раздел 7 из 13</span></div>
+    <h2 class="giant cond rv">Страте<wbr>гия</h2>
+    <p class="task rv">По заданию: пример готовой стратегии.</p>
+    <div class="body grid g3">
+      <div class="card rv"><h3>Цель по SMART</h3><p>Одна формулировка с цифрой и сроком</p></div>
+      <div class="card hot rv" style="--d:1"><h3>Big Idea</h3><p>Желание аудитории и наше решение</p></div>
+      <div class="card rv" style="--d:2"><h3>Tone of Voice</h3><p>Как говорим и чего не говорим</p></div>
+    </div>
+    <div class="slot doc gap rv"><p class="hint"><b>Сюда</b>схема: рубрики, ритм публикаций по дням недели, роль развлекательных и экспертных роликов, путь зрителя до заявки. Материал есть в проекте, нарисую схемой</p></div>
+  </div>
+</section>
+
+<section class="panel light" id="s8">
+  <div class="in-wrap">
+    <div class="bar"><span>Кейс 1</span><span>Раздел 8 из 13</span></div>
+    <h2 class="giant cond rv">Контент-<em class="script" style="color:var(--dark)">план</em></h2>
+    <p class="task rv">По заданию: домашняя работа по контент-плану.</p>
+    <div class="slot wide body rv"><p class="hint"><b>Сюда</b>одна неделя плана таблицей (день, формат, тема, цель) и кнопка на полный план в Google Таблице</p></div>
+  </div>
+</section>
+
+<section class="panel dark" id="s9">
+  <div class="in-wrap">
+    <div class="bar"><span>Кейс 1</span><span>Раздел 9 из 13</span></div>
+    <h2 class="giant cond rv">Тексты</h2>
+    <p class="task rv">По заданию: пример написания постов.</p>
+    <div class="body grid g3">
+      <div class="slot doc rv"><p class="hint"><b>Сюда</b>пост 1: экспертный</p></div>
+      <div class="slot doc rv" style="--d:1"><p class="hint"><b>Сюда</b>пост 2: прогревающий или продающий</p></div>
+      <div class="slot doc rv" style="--d:2"><p class="hint"><b>Сюда</b>пост 3: описание под Reels с призывом</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel light" id="s10">
+  <div class="in-wrap">
+    <div class="bar"><span>Кейс 1</span><span>Раздел 10 из 13</span></div>
+    <h2 class="giant cond rv">Stories</h2>
+    <p class="task rv">По заданию: примеры оформления сторис. Лучше одна связная серия из пяти, чем пять разрозненных.</p>
+    <div class="body grid g5 phones">
+      <div class="rv"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>сторис 1</p></div></div></div>
+      <div class="rv" style="--d:1"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>сторис 2</p></div></div></div>
+      <div class="rv" style="--d:2"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>сторис 3</p></div></div></div>
+      <div class="rv" style="--d:3"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>сторис 4</p></div></div></div>
+      <div class="rv" style="--d:4"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>сторис 5</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel dark" id="s11">
+  <div class="in-wrap">
+    <div class="bar"><span>Кейс 1</span><span>Раздел 11 из 13</span></div>
+    <h2 class="giant cond rv">Карусель</h2>
+    <p class="task rv">По заданию: примеры оформления каруселей. Листается вбок, как в Instagram.</p>
+    <div class="scroller body rv">
+      <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 1, обложка</p></div>
+      <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 2</p></div>
+      <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 3</p></div>
+      <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 4</p></div>
+      <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 5</p></div>
+      <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 6, призыв</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel light" id="s12">
+  <div class="in-wrap">
+    <div class="bar"><span>Кейс 1</span><span>Раздел 12 из 13</span></div>
+    <h2 class="giant cond rv">Визуал</h2>
+    <p class="task rv">По заданию: примеры оформления визуала.</p>
+    <div class="body grid g2">
+      <div class="rv">
+        <div class="hl"><i></i><i></i><i></i><i></i></div>
+        <div class="feed"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="note">Сюда: обложки актуальных и сетка профиля из 9 публикаций.</p>
       </div>
-      <p class="note">Карточки помечены «черновик», пока ты не подтвердишь названия и годы.</p>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <div class="head">
-      <span class="num">3</span>
-      <div><h2>Мои навыки</h2></div>
-      <p>По заданию здесь: что умеешь после обучения. Светлые — из списка курса, сиреневые — твои собственные, их курс просит добавить обязательно.</p>
-    </div>
-    <div class="body">
-      <ul class="tags">
-        <li>Анализ целевой аудитории</li>
-        <li>Анализ конкурентов</li>
-        <li>SWOT-анализ</li>
-        <li>Контент-стратегия</li>
-        <li>Контент-план</li>
-        <li>Тексты и описания</li>
-        <li>Stories</li>
-        <li>Reels</li>
-        <li>Canva, Figma</li>
-        <li>Оформление профиля</li>
-        <li>Воронки продаж</li>
-        <li>Базовая аналитика</li>
-        <li class="own">Монтаж в CapCut</li>
-        <li class="own">Нарезка эфиров по монтажному листу</li>
-        <li class="own">Работа с нейросетями в производстве контента</li>
-        <li class="own">Решения по статистике: что и когда публиковать</li>
-        <li class="own">Прогревы и запуски</li>
-        <li class="own">Сайты на WordPress</li>
-      </ul>
-      <p class="note">Сиреневые навыки — черновик по тому, что ты реально делаешь. Проверь и дополни.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ЧАСТЬ 2 -->
-<div class="part"><div class="wrap"><p>Часть 2. Практическая работа<small>Разделы 4–13 задания, собранные в кейсы, как советует куратор</small></p></div></div>
-
-<section id="case1">
-  <div class="wrap">
-    <p class="case-title">Кейс 1. Эксперт по теме счастья, коуч</p>
-    <dl class="case-meta">
-      <div><dt>Ниша</dt><dd>личностный рост</dd></div>
-      <div><dt>Срок работы</dt><dd>с сентября 2026</dd></div>
-      <div><dt>Лучший ролик</dt><dd>68 тыс. просмотров</dd></div>
-      <div><dt>Задача</dt><dd>новые подписчики</dd></div>
-    </dl>
-    <p class="note">Кейс идёт без имени клиента. Цифры в шапке кейса — три-четыре самых сильных; подберём по статистике.</p>
-    <div class="slot wide gap" style="max-height:420px;width:100%"><p class="hint"><b>Сюда</b>большой кадр проекта: коллаж из роликов или скриншот профиля «до и после»</p></div>
-  </div>
-</section>
-
-<section id="s4">
-  <div class="wrap">
-    <div class="head"><span class="num">4</span><div><h2>Анализ целевой аудитории</h2></div><p>По заданию: домашняя работа по анализу ЦА.</p></div>
-    <div class="body">
-      <div class="cols c3">
-        <div class="card"><h3>Сегмент 1</h3><p>Кто, боль, желание, повод купить</p></div>
-        <div class="card"><h3>Сегмент 2</h3><p>Кто, боль, желание, повод купить</p></div>
-        <div class="card"><h3>Сегмент 3</h3><p>Кто, боль, желание, повод купить</p></div>
-      </div>
-      <div class="slot doc gap"><p class="hint"><b>Сюда</b>твоя домашка по ЦА (5WHY, портрет по 7 критериям). На странице показываем 2–4 сегмента карточками, полный документ даём ссылкой или раскрывающимся блоком</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="s5">
-  <div class="wrap">
-    <div class="head"><span class="num">5</span><div><h2>Анализ конкурентов</h2></div><p>По заданию: домашняя работа по анализу конкурентов.</p></div>
-    <div class="body">
-      <div class="slot doc"><p class="hint"><b>Сюда</b>таблица конкурентов по 9 блокам: продукт, цены, ЦА, визуал, контент, сторис и Reels, вовлечение, сильные и слабые стороны. На странице — 3–4 конкурента в сравнительной таблице и короткий вывод, что берём себе</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="s6">
-  <div class="wrap">
-    <div class="head"><span class="num">6</span><div><h2>SWOT-анализ</h2></div><p>По заданию: домашняя работа по SWOT.</p></div>
-    <div class="body">
-      <div class="cols c2">
-        <div class="card"><h3>Сильные стороны</h3><p>3–5 пунктов из домашки</p></div>
-        <div class="card"><h3>Слабые стороны</h3><p>3–5 пунктов из домашки</p></div>
-        <div class="card"><h3>Возможности</h3><p>3–5 пунктов из домашки</p></div>
-        <div class="card"><h3>Угрозы</h3><p>3–5 пунктов из домашки</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="s7">
-  <div class="wrap">
-    <div class="head"><span class="num">7</span><div><h2>Стратегия продвижения</h2></div><p>По заданию: пример готовой стратегии.</p></div>
-    <div class="body">
-      <div class="cols c3">
-        <div class="card"><h3>Цель по SMART</h3><p>Одна формулировка с цифрой и сроком</p></div>
-        <div class="card"><h3>Big Idea</h3><p>Желание аудитории и наше решение</p></div>
-        <div class="card"><h3>Tone of Voice</h3><p>Как говорим и чего не говорим</p></div>
-      </div>
-      <div class="slot doc gap"><p class="hint"><b>Сюда</b>схема стратегии: рубрики, ритм публикаций по дням недели, роль развлекательных и экспертных роликов, путь зрителя до заявки. Материал есть в проекте, оформлю схемой</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="s8">
-  <div class="wrap">
-    <div class="head"><span class="num">8</span><div><h2>Контент-план</h2></div><p>По заданию: домашняя работа по контент-плану.</p></div>
-    <div class="body">
-      <div class="slot wide"><p class="hint"><b>Сюда</b>одна неделя контент-плана красивой таблицей (день, формат, тема, цель) и ссылка на полный план в Google Таблице</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="s9">
-  <div class="wrap">
-    <div class="head"><span class="num">9</span><div><h2>Примеры текстов</h2></div><p>По заданию: пример написания постов.</p></div>
-    <div class="body">
-      <div class="cols c3">
-        <div class="slot doc"><p class="hint"><b>Сюда</b>пост 1: экспертный</p></div>
-        <div class="slot doc"><p class="hint"><b>Сюда</b>пост 2: продающий или прогревающий</p></div>
-        <div class="slot doc"><p class="hint"><b>Сюда</b>пост 3: описание под Reels с призывом</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="s10">
-  <div class="wrap">
-    <div class="head"><span class="num">10</span><div><h2>Stories</h2></div><p>По заданию: примеры оформления сторис.</p></div>
-    <div class="body">
-      <div class="cols c5">
-        <div class="slot r916"><p class="hint"><b>Сюда</b>сторис 1</p></div>
-        <div class="slot r916"><p class="hint"><b>Сюда</b>сторис 2</p></div>
-        <div class="slot r916"><p class="hint"><b>Сюда</b>сторис 3</p></div>
-        <div class="slot r916"><p class="hint"><b>Сюда</b>сторис 4</p></div>
-        <div class="slot r916"><p class="hint"><b>Сюда</b>сторис 5</p></div>
-      </div>
-      <p class="note">Лучше показать связку из 4–5 сторис одной серии (например, прогрев), чем пять разрозненных.</p>
-    </div>
-  </div>
-</section>
-
-<section id="s11">
-  <div class="wrap">
-    <div class="head"><span class="num">11</span><div><h2>Карусель</h2></div><p>По заданию: примеры оформления каруселей. Листается вбок, как в Instagram.</p></div>
-    <div class="body">
-      <div class="scroller">
-        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 1, обложка</p></div>
-        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 2</p></div>
-        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 3</p></div>
-        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 4</p></div>
-        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 5</p></div>
-        <div class="slot r45"><p class="hint"><b>Сюда</b>слайд 6, призыв</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="s12">
-  <div class="wrap">
-    <div class="head"><span class="num">12</span><div><h2>Визуал</h2></div><p>По заданию: примеры оформления визуала.</p></div>
-    <div class="body">
-      <div class="cols c2">
-        <div>
-          <div class="feed">
-            <div class="slot r45"></div><div class="slot r45"></div><div class="slot r45"></div>
-            <div class="slot r45"></div><div class="slot r45"></div><div class="slot r45"></div>
-            <div class="slot r45"></div><div class="slot r45"></div><div class="slot r45"></div>
-          </div>
-          <p class="note">Сюда: сетка профиля из 9 обложек.</p>
-        </div>
-        <div class="cols">
-          <div class="card"><h3>Шрифты и цвета</h3><p>Заголовочный шрифт, цвет заголовков, правила размера</p></div>
-          <div class="card"><h3>Обложки</h3><p>Единая обложка серии и как на неё ставится заголовок ролика</p></div>
-          <div class="card"><h3>Правила кадра</h3><p>Где стоит заголовок, где субтитры, что не перекрываем</p></div>
-        </div>
+      <div class="grid">
+        <div class="card rv"><h3>Шрифты и цвета</h3><p>Заголовочный шрифт, цвет заголовков, правила размера</p></div>
+        <div class="card hot rv" style="--d:1"><h3>Обложки</h3><p>Единая обложка серии и заголовок ролика на ней</p></div>
+        <div class="card rv" style="--d:2"><h3>Правила кадра</h3><p>Где заголовок, где субтитры, что не перекрываем</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="s13">
-  <div class="wrap">
-    <div class="head"><span class="num">13</span><div><h2>Reels</h2></div><p>По заданию: 3–5 сценариев или ссылки на готовые видео. Ролики будут играть прямо на странице.</p></div>
-    <div class="body">
-      <div class="cols c5">
-        <div class="slot r916"><p class="hint"><b>Сюда</b>ролик 1, самый сильный, с цифрой просмотров</p></div>
-        <div class="slot r916"><p class="hint"><b>Сюда</b>ролик 2, развлекательный тест</p></div>
-        <div class="slot r916"><p class="hint"><b>Сюда</b>ролик 3, экспертный</p></div>
-        <div class="slot r916"><p class="hint"><b>Сюда</b>ролик 4, отзыв</p></div>
-        <div class="slot r916"><p class="hint"><b>Сюда</b>ролик 5, нарезка эфира</p></div>
-      </div>
-      <p class="note">Под каждым роликом: формат, задача, просмотры. Мне нужны ссылки на ролики в Instagram или сами файлы.</p>
+<section class="panel dark" id="s13">
+  <div class="in-wrap">
+    <div class="bar"><span>Кейс 1</span><span>Раздел 13 из 13</span></div>
+    <h2 class="giant cond rv">Reels</h2>
+    <p class="task rv">По заданию: 3–5 сценариев или ссылки на готовые видео. Ролики будут играть прямо в телефонах.</p>
+    <div class="body grid g5 phones">
+      <div class="rv"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>ролик 1, самый сильный</p></div></div><p class="cap">68 тыс. просмотров</p></div>
+      <div class="rv" style="--d:1"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>ролик 2, тест</p></div></div><p class="cap">Развлекательный</p></div>
+      <div class="rv" style="--d:2"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>ролик 3</p></div></div><p class="cap">Экспертный</p></div>
+      <div class="rv" style="--d:3"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>ролик 4</p></div></div><p class="cap">Отзыв</p></div>
+      <div class="rv" style="--d:4"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>ролик 5</p></div></div><p class="cap">Нарезка эфира</p></div>
     </div>
+    <p class="note">Мне нужны ссылки на ролики в Instagram или сами файлы.</p>
   </div>
 </section>
 
-<section id="case2">
-  <div class="wrap">
-    <p class="case-title">Кейс 2 и кейс 3</p>
-    <p class="lead">Короткие кейсы под одну задачу, чтобы показать другие ниши и навыки.</p>
-    <div class="cols c2 gap">
-      <div class="card"><h3>Кейс 2</h3><p>Ниша и задача</p><div class="cols c3 gap"><div class="slot r916"></div><div class="slot r916"></div><div class="slot r916"></div></div><p class="note">Сюда: второй клиент или твой собственный проект — 3 работы одного типа.</p></div>
-      <div class="card"><h3>Кейс 3</h3><p>Ниша и задача</p><div class="cols c3 gap"><div class="slot r916"></div><div class="slot r916"></div><div class="slot r916"></div></div><p class="note">Сюда: одно направление, например только идеи и сценарии Reels. Если показывать нечего, блок уберём.</p></div>
+<section class="panel light" id="case2">
+  <div class="in-wrap">
+    <div class="bar"><span>Часть 2. Практическая работа</span><span>Кейсы 2 и 3</span></div>
+    <h2 class="giant cond rv">Ещё <em class="script" style="color:var(--dark)">кейсы</em></h2>
+    <p class="task rv">Короткие кейсы под одну задачу, чтобы показать другие ниши и навыки.</p>
+    <div class="body grid g2">
+      <div class="card rv"><h3>Кейс 2</h3><p>Ниша и задача</p><div class="grid g3 gap"><div class="slot r916"></div><div class="slot r916"></div><div class="slot r916"></div></div><p class="note">Сюда: второй клиент или твой собственный проект, три работы одного типа.</p></div>
+      <div class="card rv" style="--d:1"><h3>Кейс 3</h3><p>Ниша и задача</p><div class="grid g3 gap"><div class="slot r916"></div><div class="slot r916"></div><div class="slot r916"></div></div><p class="note">Сюда: одно направление, например подбор визуала по архетипу. Нечего показать — блок уберём.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ЧАСТЬ 3 -->
-<div class="part"><div class="wrap"><p>Часть 3. Поиск клиентов<small>Сдаётся Google Таблицей со скриншотами; на сайте — итог и ссылка</small></p></div></div>
-
-<section id="clients">
-  <div class="wrap">
-    <div class="head">
-      <span class="num">→</span>
-      <div><h2>Мой план поиска клиентов</h2></div>
-      <p>По заданию: что уже сделано для поиска клиентов, с цифрами и скриншотами.</p>
+<section class="panel dark" id="clients">
+  <div class="in-wrap">
+    <div class="bar"><span>Часть 3. Практика поиска клиента</span><span>Google Таблица + скриншоты</span></div>
+    <h2 class="giant cond rv">Поиск <em class="script">клиентов</em></h2>
+    <p class="task rv">По заданию: что уже сделано для поиска клиентов, с цифрами и скриншотами.</p>
+    <ul class="steps body">
+      <li class="rv"><b>✓</b><span>Подготовила коммерческие предложения с пакетами и ценами</span></li>
+      <li class="rv"><b>✓</b><span>Собрала портфолио-сайт</span></li>
+      <li class="rv"><b>3–4</b><span>сообщения в профильном чате</span></li>
+      <li class="rv"><b>1</b><span>созвон и клиент в первый же день</span></li>
+      <li class="rv"><b>__</b><span>сообщений потенциальным клиентам</span></li>
+      <li class="rv"><b>__</b><span>аудитов страниц</span></li>
+      <li class="rv"><b>__</b><span>экспертных Stories и Reels у себя</span></li>
+      <li class="rv"><b>__</b><span>экспертных комментариев и чатов</span></li>
+    </ul>
+    <p class="note">Верхние четыре строки ты уже сделала (уточни точное число сообщений). Нижние заполняем по мере действий за две недели.</p>
+    <div class="grid g4 phones gap">
+      <div class="rv"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>скриншот сообщения в чате</p></div></div></div>
+      <div class="rv" style="--d:1"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>скриншот ответа клиента</p></div></div></div>
+      <div class="rv" style="--d:2"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>скриншот предложения</p></div></div></div>
+      <div class="rv" style="--d:3"><div class="phone"><div class="slot r916"><p class="hint"><b>Сюда</b>скриншот профиля</p></div></div></div>
     </div>
-    <div class="body">
-      <ul class="steps">
-        <li><b>✓</b><span>Подготовила коммерческие предложения с пакетами и ценами</span></li>
-        <li><b>✓</b><span>Собрала портфолио-сайт</span></li>
-        <li><b>3–4</b><span>сообщения в профильном чате</span></li>
-        <li><b>1</b><span>созвон и клиент в первый же день</span></li>
-        <li><b>__</b><span>сообщений потенциальным клиентам</span></li>
-        <li><b>__</b><span>аудитов страниц</span></li>
-        <li><b>__</b><span>экспертных Stories и Reels у себя</span></li>
-        <li><b>__</b><span>экспертных комментариев и чатов</span></li>
-      </ul>
-      <p class="note">Верхние четыре строки — то, что ты уже сделала (уточни точное число сообщений). Нижние заполняем по мере действий за эти две недели.</p>
-      <div class="cols c4 gap">
-        <div class="slot r916"><p class="hint"><b>Сюда</b>скриншот сообщения в чате</p></div>
-        <div class="slot r916"><p class="hint"><b>Сюда</b>скриншот ответа клиента</p></div>
-        <div class="slot r916"><p class="hint"><b>Сюда</b>скриншот предложения</p></div>
-        <div class="slot r916"><p class="hint"><b>Сюда</b>скриншот оформленного профиля</p></div>
-      </div>
-      <p class="gap"><a class="btn" href="#">Открыть таблицу поиска клиентов</a></p>
-      <p class="note">Кнопка поведёт на Google Таблицу: дата, действие, кому, результат, скриншот.</p>
-    </div>
+    <p class="gap" style="margin-top:36px"><a class="btn" href="#">Открыть таблицу поиска клиентов</a></p>
   </div>
 </section>
 
-</main>
-
-<footer id="contacts">
-  <div class="wrap">
-    <h2>Напишите мне</h2>
-    <div class="links">
-      <a class="btn" href="#">Telegram</a>
-      <a class="btn ghost" href="#">Instagram</a>
-      <a class="btn ghost" href="#">Почта</a>
+<footer class="panel accent" id="contacts">
+  <div class="in-wrap">
+    <div class="bar"><span>Татьяна Жукова</span><span>SMM-специалист</span></div>
+    <h2 class="giant cond rv">Давайте <em class="script" style="color:var(--dark)">работать</em></h2>
+    <div class="contacts rv">
+      <a class="btn" style="background:var(--dark);color:var(--on-dark)" href="#">Telegram</a>
+      <a class="btn" style="background:var(--dark);color:var(--on-dark)" href="#">Instagram</a>
+      <a class="btn" style="background:var(--dark);color:var(--on-dark)" href="#">Почта</a>
     </div>
-    <p class="hint"><b>Сюда</b>твои ссылки: Telegram, Instagram, почта для заказов. Пока кнопки никуда не ведут.</p>
+    <p class="note" style="color:var(--dark)">Сюда: твои ссылки. Пока кнопки никуда не ведут.</p>
   </div>
 </footer>
 
+</main>
+
+<a class="ring" id="ring" href="#top" aria-label="Наверх"><span>↑</span></a>
+
 <script>
-  const btn=document.getElementById('toggle');
-  btn.addEventListener('click',()=>{
-    const clean=document.body.classList.toggle('clean');
-    btn.setAttribute('aria-pressed',String(!clean));
-  });
+  // подсказки
+  const tg=document.getElementById('toggle');
+  tg.addEventListener('click',()=>{const c=document.body.classList.toggle('clean');tg.textContent='Подсказки: '+(c?'выкл':'вкл');tg.setAttribute('aria-pressed',String(!c));});
+  // палитры
+  const themes=[['elegant','Elegant'],['rose','Navy + Rose'],['bordo','Бордо']];let ti=0;
+  const pal=document.getElementById('pal');
+  pal.addEventListener('click',()=>{ti=(ti+1)%themes.length;document.documentElement.dataset.theme=themes[ti][0];pal.textContent='Палитра: '+themes[ti][1];});
+  // проявление и счётчики
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');
+    const b=e.target.querySelector('[data-count]');if(b&&!b.dataset.done){b.dataset.done=1;const n=+b.dataset.count,t0=performance.now();
+      const tick=t=>{const k=Math.min(1,(t-t0)/1400);b.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(tick)};requestAnimationFrame(tick);}
+    io.unobserve(e.target);}),{threshold:.15});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  // кольцо прогресса, параллакс слова, активный пункт меню
+  const ring=document.getElementById('ring'),word=document.getElementById('word');
+  const links=[...document.querySelectorAll('.nav a')],secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+  const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const onScroll=()=>{const h=document.documentElement,y=h.scrollTop,max=h.scrollHeight-h.clientHeight;
+    ring.style.setProperty('--p',max?y/max*100:0);
+    if(!still&&y<innerHeight)word.style.transform='translateY('+(y*.18)+'px)';
+    let cur=-1;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<innerHeight*.4)cur=i});
+    links.forEach((a,i)=>a.classList.toggle('on',i===cur));};
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
 </script>
 </body>
 </html>
