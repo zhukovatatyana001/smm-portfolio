@@ -92,11 +92,11 @@ a{color:inherit}
 .hero .btn{margin-top:clamp(22px,2.6vw,40px)}
 
 /* обо мне + услуги */
-.duo{position:relative;z-index:3;overflow-x:clip;margin-top:calc(-1*clamp(70px,7.2vw,110px));display:grid;grid-template-columns:minmax(0,57fr) minmax(0,43fr)}
+.duo{position:relative;z-index:3;overflow-x:clip;margin-top:calc(-1*clamp(56px,5.4vw,86px));background:#E8DACA;display:grid;grid-template-columns:minmax(0,57fr) minmax(0,43fr)}
 .about{position:relative;padding:clamp(28px,3vw,44px) clamp(24px,3vw,48px) clamp(40px,4vw,60px) var(--pad);display:grid;grid-template-columns:minmax(150px,.72fr) minmax(0,1.28fr);gap:clamp(22px,2.6vw,40px);align-items:start}
-.about .cap{position:absolute;left:0;bottom:calc(100% - 1px);height:clamp(48px,5vw,76px);width:calc(100% + 1px)}
+.about .cap{position:absolute;left:0;bottom:calc(100% - 1px);height:clamp(52px,5.6vw,90px);width:calc(100% + 1px);overflow:visible}
 .about .cap .fill{fill:#E8DACA}
-.about .cap .shine{fill:none;stroke:rgba(201,164,100,.55);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.about .cap .shine{fill:none;stroke:var(--gold);stroke-width:1.5;vector-effect:non-scaling-stroke;opacity:.95}
 .arch{border-radius:999px 999px 18px 18px;overflow:hidden;aspect-ratio:.8;box-shadow:0 26px 50px rgba(64,44,22,.22)}
 .arch img{width:100%;height:100%;object-fit:cover;object-position:50% 80%}
 .about .h2{margin-top:clamp(6px,1vw,14px)}
@@ -305,7 +305,8 @@ a{color:inherit}
 
 /* контакты и подвал */
 .ending{position:relative;overflow-x:clip}
-.contact{position:relative;overflow:hidden;padding:clamp(48px,5vw,72px) 0 clamp(80px,9vw,140px)}
+.ending{--fw:clamp(78px,10.5vw,190px)}
+.contact{position:relative;overflow:hidden;padding:clamp(48px,5vw,72px) 0 calc(var(--fw) * .5 + clamp(34px,3.4vw,56px))}
 .contact .wrap{position:relative;z-index:2;display:grid;grid-template-columns:auto 1px auto auto auto;gap:clamp(22px,3vw,48px);align-items:center;justify-content:start}
 .contact .vline{width:1px;height:84px;background:rgba(28,29,34,.3)}
 .contact .h2{font-size:clamp(38px,3.6vw,54px)}
@@ -316,8 +317,8 @@ a{color:inherit}
 .ch span span{display:block;font-size:13.5px;color:var(--ink-soft)}
 .contact-arc{position:absolute;right:-8%;top:-30%;width:56%;height:190%;pointer-events:none;z-index:1}
 .contact-arc circle{fill:none;stroke:var(--gold);stroke-width:1.4;vector-effect:non-scaling-stroke;opacity:.8}
-.silk-corner{position:absolute;right:0;bottom:0;width:42%;height:100%;background:url("assets/silk.jpg") 70% 60%/cover;-webkit-mask-image:radial-gradient(120% 140% at 100% 105%,#000 52%,transparent 52.4%);mask-image:radial-gradient(120% 140% at 100% 105%,#000 52%,transparent 52.4%);z-index:1}
-.site-foot{position:relative;padding:34px 0;z-index:2}
+.foot-wrap{position:relative;margin-top:calc(-1*var(--fw));z-index:2}
+.site-foot{position:relative;padding:calc(var(--fw) + 22px) 0 34px;background-position:center 30%;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 140' preserveAspectRatio='none'%3E%3Cpath d='M0 134 C 420 142, 820 132, 1080 92 C 1230 68, 1350 34, 1440 6 L1440 140 L0 140 Z'/%3E%3C/svg%3E") 0 0/100% var(--fw) no-repeat,linear-gradient(#000,#000) 0 calc(var(--fw) - 1px)/100% calc(100% - var(--fw) + 1px) no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 140' preserveAspectRatio='none'%3E%3Cpath d='M0 134 C 420 142, 820 132, 1080 92 C 1230 68, 1350 34, 1440 6 L1440 140 L0 140 Z'/%3E%3C/svg%3E") 0 0/100% var(--fw) no-repeat,linear-gradient(#000,#000) 0 calc(var(--fw) - 1px)/100% calc(100% - var(--fw) + 1px) no-repeat}
 .site-foot .wrap{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
 .site-foot .nm{font-family:var(--serif);font-size:20px;letter-spacing:.08em;padding-right:28px;border-right:1px solid rgba(244,236,223,.35)}
 .site-foot .sm{font-size:12.5px;letter-spacing:.3em}
@@ -326,7 +327,7 @@ a{color:inherit}
 .site-foot .soc a:hover{background:rgba(207,169,106,.2)}
 .site-foot .soc .ic{stroke:var(--on-navy);width:22px;height:22px}
 .site-foot small{font-size:12px;color:var(--on-navy-soft)}
-.stroke{position:absolute;right:-60px;bottom:20px;width:min(42vw,600px);z-index:3;pointer-events:none;filter:drop-shadow(0 10px 18px rgba(80,55,10,.35))}
+.stroke{position:absolute;right:-4vw;top:calc(var(--fw) * -.3);width:clamp(260px,44vw,700px);z-index:3;pointer-events:none;filter:drop-shadow(0 10px 18px rgba(40,28,6,.35))}
 
 /* места под материалы и подсказки */
 .ph{position:relative;background:linear-gradient(160deg,rgba(255,251,245,.6),rgba(218,202,183,.55));border-radius:14px;display:flex;align-items:flex-end;overflow:hidden}
@@ -400,6 +401,7 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
   .caseopen .meta{grid-template-columns:1fr}
   .contact .wrap{grid-template-columns:1fr}
   .contact .btn{justify-self:start}
+  .contact-arc{display:none}
   .plan th:nth-child(4),.plan td:nth-child(4){display:none}
   .plan td,.plan th{padding:12px 12px}
   .edu li{grid-template-columns:70px 1fr}
@@ -469,8 +471,8 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
 <section class="duo" aria-label="Обо мне и услуги">
   <div class="about cream-bg" id="about">
     <svg class="cap" viewBox="0 0 800 70" preserveAspectRatio="none" aria-hidden="true">
-      <path class="fill" d="M0 70 L0 52 C 170 66, 380 64, 560 40 C 680 24, 750 22, 801 22 L801 70 Z"/>
-      <path class="shine" d="M0 52 C 170 66, 380 64, 560 40 C 680 24, 750 22, 801 22"/>
+      <path class="fill" d="M0 72 L0 46 C 150 60, 300 40, 470 22 C 610 8, 720 24, 801 70 L801 72 Z"/>
+      <path class="shine" d="M0 46 C 150 60, 300 40, 470 22 C 610 8, 720 24, 801 70"/>
     </svg>
     <div class="arch rv"><img src="assets/about.jpg" alt="Блокнот, ручка и свеча на мраморном столе" loading="lazy"></div>
     <div>
@@ -795,7 +797,6 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
 <div class="ending">
   <section class="contact cream-bg" id="contacts">
     <svg class="contact-arc" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><circle cx="62" cy="96" r="58"/></svg>
-    <div class="silk-corner" aria-hidden="true"></div>
     <div class="wrap">
       <div class="intro"><h2 class="h2 rv">Связаться</h2><p class="lead rv">Обсудим ваш проект, задачи и цели.<br>Предложу оптимальное решение.</p></div>
       <span class="vline"></span>
@@ -805,6 +806,7 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
       <p class="hint" style="grid-column:1/-1">Нужны твои ник в Telegram и почта: впишу их вместо подписей и подключу кнопки.</p>
     </div>
   </section>
+  <div class="foot-wrap">
   <footer class="site-foot silk-bg">
     <div class="wrap">
       <span class="nm">ТАТЬЯНА ЖУКОВА</span><span class="sm">SMM ПОРТФОЛИО</span>
@@ -812,6 +814,7 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
     </div>
   </footer>
   <img class="stroke" src="assets/gold-stroke-sm.webp" srcset="assets/gold-stroke-sm.webp 1068w, assets/gold-stroke.webp 2137w" sizes="(max-width:900px) 70vw, 800px" alt="" aria-hidden="true">
+  </div>
 </div>
 
 <button class="hints-btn" id="hints" type="button" aria-pressed="false">Подсказки</button>
