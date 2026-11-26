@@ -160,43 +160,80 @@
     .js .word span,.js .whose{animation:none;opacity:1;transform:none}
     .js .rv{opacity:1;filter:none;transform:none;transition:none}
   }
+
+/* ===== Navy editorial redesign: 26 November 2026, review branch ===== */
+:root,[data-theme="elegant"]{--bg:#eee0d0;--dark:#0d1a2d;--ink:#171b25;--on-dark:#f5eadc;--accent:#d5aa62;--card:#f5e9dc}
+body{font-family:"Manrope",Arial,sans-serif;background:#eee0d0;font-size:15px}
+.panel{padding:clamp(42px,5.3vw,82px) clamp(22px,4.2vw,66px)}
+.panel.light{background:linear-gradient(124deg,#f4e9dd,#dfcbb8 75%,#f4e7dc)}
+.panel.dark{background:radial-gradient(ellipse at 72% 35%,#223450 0,transparent 45%),repeating-linear-gradient(123deg,rgba(200,222,250,.028) 0px,rgba(200,222,250,0) 3px,rgba(0,0,0,.12) 8px,transparent 15px),#0d1a2d}
+.panel.accent{background:linear-gradient(125deg,#eadbcb,#e9d8c5);color:#142037}
+.in-wrap{max-width:1350px}
+.nav{position:absolute;top:0;left:0;transform:none;z-index:30;width:100%;max-width:none;border-radius:0;background:linear-gradient(90deg,rgba(9,20,36,.85),rgba(9,20,36,.25));box-shadow:none;backdrop-filter:none;padding:16px clamp(20px,5vw,72px);display:flex;justify-content:space-between;gap:20px;color:#f6e8d8}
+.nav a,.nav a:hover,.nav a.on{background:none;color:#f6e8d8;border-radius:0;font-size:13px;font-weight:500}
+.nav .brand-name{font-family:Georgia,serif;font-size:21px;letter-spacing:.06em;line-height:1.1;min-width:210px;padding:0}
+.brand-name small{display:block;font:500 8px "Manrope",sans-serif;letter-spacing:.3em;margin-top:7px}
+.nav-links{display:flex;gap:clamp(8px,2.5vw,35px);align-items:center}
+.nav-links a{padding:4px 0}
+.nav-links a:hover{color:var(--accent);text-decoration:underline}
+.nav .nav-contact{border:1px solid #dbb574;color:#dbb574;border-radius:50px;padding:9px 24px;white-space:nowrap}
+.nav .utility{display:none}
+.hero{height:min(750px,100svh);min-height:560px;padding:0;display:block;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 35%,#26334a,#0a1424 70%)}
+.hero:before{content:"";position:absolute;inset:0;z-index:0;background:repeating-linear-gradient(129deg,rgba(210,232,255,.03) 0 2px,rgba(0,0,0,.12) 4px,transparent 13px),radial-gradient(ellipse at 3% 36%,rgba(85,125,175,.32),transparent 39%);mix-blend-mode:screen}
+.hero-photo{position:absolute;right:0;top:0;width:66%;height:100%;overflow:hidden;background:linear-gradient(130deg,#1e3049,#c2a088)}
+.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0d1a2d 0%,rgba(13,26,45,.7) 12%,transparent 45%),linear-gradient(0deg,rgba(13,26,45,.25),transparent 35%)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.hero-arc{position:absolute;top:9%;right:2%;width:48vw;height:43vw;max-width:650px;max-height:590px;border:1.6px solid #d7aa60;border-radius:50%;z-index:3;pointer-events:none;clip-path:inset(0 0 38% 0)}
+.hero-content{position:relative;z-index:5;padding:clamp(126px,14vw,182px) 5.5% 70px;width:min(49%,680px);color:#f4e7d8}
+.hero-eyebrow{font-size:clamp(10px,1.1vw,14px);letter-spacing:.22em;margin-bottom:15px}
+.hero h1{font:400 clamp(65px,7.3vw,118px)/.88 Georgia,"Times New Roman",serif;letter-spacing:-.03em;color:#f4e3d0}
+.hero-content p{font:italic clamp(18px,2.05vw,28px)/1.16 Georgia,serif;max-width:490px;margin-top:22px}
+.hero-action{display:inline-flex;justify-content:space-between;align-items:center;gap:18px;background:linear-gradient(120deg,#e4c283,#c49b55,#e9c78c);color:#151820;border-radius:100px;padding:13px 22px;text-decoration:none;font-weight:600;margin-top:24px;min-width:245px}
+.hero-action span{font-size:25px;line-height:1}
+.ticker{padding:11px 0;background:#101e31}
+.bar{margin-bottom:16px;font-size:11px}
+.giant{font-family:Georgia,serif;font-size:clamp(40px,6.2vw,90px);font-weight:400;text-transform:uppercase;letter-spacing:-.035em;line-height:1.02}
+.giant .script{font-size:.48em}
+.body{margin-top:24px}
+.card{padding:18px;border-radius:14px}
+.card h3{font-family:Georgia,serif;font-size:clamp(22px,2.2vw,31px);font-weight:400;text-transform:none}
+.panel .task{margin-top:12px;line-height:1.45}
+.panel .slot{border-radius:14px}
+#about{border-radius:0;background:linear-gradient(120deg,#eedfce,#ddcab8)}
+#education,#skills,#case1,#s4,#s5,#s6,#s7,#s8,#s9,#s10,#s11,#s12,#s13,#case2,#clients{scroll-margin-top:10px}
+#about .in-wrap,#skills .in-wrap{max-width:1250px}
+#contacts{background:linear-gradient(145deg,#e9d6c1,#f3e6d9);position:relative}
+#contacts:after{content:"";position:absolute;right:-10%;bottom:-27%;width:57%;height:130%;border-top:4px solid #bb8b44;border-radius:65% 0 0 0;transform:rotate(-12deg);pointer-events:none}
+.panel.dark .card{background:rgba(15,29,47,.5);border:1px solid rgba(218,176,113,.45)}
+@media(min-width:1100px){#about,#education,#skills{padding-top:40px;padding-bottom:40px}.panel .g3{gap:12px}.panel .grid .card{min-width:0}}
+@media(max-width:900px){.nav{padding:14px 20px}.nav-links{gap:12px}.nav-links a{font-size:11px}.nav .brand-name{min-width:170px;font-size:17px}.hero-content{width:57%;padding-top:150px}.hero-photo{width:70%}.hero h1{font-size:clamp(55px,8vw,83px)}}
+@media(max-width:640px){.nav{position:absolute;flex-wrap:wrap;padding:13px 18px;gap:10px}.nav .brand-name{min-width:unset;font-size:17px}.nav-links{order:3;width:100%;overflow-x:auto;justify-content:space-between;gap:12px}.nav-links a{white-space:nowrap;font-size:11px}.nav .nav-contact{font-size:11px;padding:7px 12px}.hero{height:auto;min-height:780px}.hero-photo{width:100%;height:71%;top:15%;opacity:.9}.hero-photo:after{background:linear-gradient(180deg,#0d1a2d 1%,rgba(13,26,45,.35) 28%,transparent 55%,#0d1a2d 100%),linear-gradient(90deg,rgba(13,26,45,.35),transparent)}.hero-content{width:100%;padding:150px 7% 30px;min-height:780px;display:flex;flex-direction:column;align-items:flex-start}.hero h1{font-size:clamp(61px,15vw,92px)}.hero-content p{font-size:20px;max-width:330px;margin-top:auto;text-shadow:0 2px 18px #0d1a2d}.hero-action{margin-top:20px}.hero-arc{width:90vw;height:90vw;top:19%;right:-16%}.panel{padding:42px 20px}.giant{font-size:clamp(43px,11vw,70px)}.g3,.g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}.bar{font-size:10px}.panel .body{margin-top:18px}.panel .card{padding:14px}#contacts:after{opacity:.4}}
+@media(max-width:420px){.hero h1{font-size:57px}.g2,.g3,.g4,.g5{grid-template-columns:1fr}.hero{min-height:720px}.hero-content{min-height:720px}.hero-photo{height:70%}}
+
 </style>
 <link rel="stylesheet" href="navy-editorial.css">
 </head>
 <body>
 
 <nav class="nav" aria-label="Разделы">
-  <a href="#about">Обо мне</a>
-  <a href="#education">Образование</a>
-  <a href="#skills">Навыки</a>
-  <a href="#case1">Кейсы</a>
-  <a href="#clients">Поиск клиентов</a>
-  <a href="#contacts">Контакты</a>
-  <button id="pal" type="button">Палитра: Elegant</button>
-  <button id="toggle" class="ghost" type="button" aria-pressed="true">Подсказки: вкл</button>
+  <a class="brand-name" href="#top">ТАТЬЯНА ЖУКОВА <small>S M M &nbsp; П О Р Т Ф О Л И О</small></a>
+  <div class="nav-links"><a href="#about">Обо мне</a><a href="#services">Услуги</a><a href="#case1">Кейсы</a><a href="#approach">Подход</a><a href="#skills">Инструменты</a></div>
+  <a class="nav-contact" href="#contacts">Связаться</a>
+  <button id="pal" class="utility" type="button">Палитра: Elegant</button>
+  <button id="toggle" class="utility" type="button" aria-pressed="true">Подсказки: вкл</button>
 </nav>
 
 <main id="top">
 
 <!-- ПЕРВЫЙ ЭКРАН -->
-<header class="panel light hero">
-  <div class="in-wrap">
-    <div class="hero-top"><span>SMM-специалист</span><span>2026</span><span>Татьяна Жукова</span></div>
-    <div class="word cond" id="word" aria-label="Портфолио">
-      <em class="script whose">Татьяна Жукова</em>
-      <span style="--i:0">П</span><span style="--i:1">О</span><span style="--i:2">Р</span><span style="--i:3">Т</span><span style="--i:4">Ф</span><span style="--i:5">О</span><span style="--i:6">Л</span><span style="--i:7">И</span><span style="--i:8">О</span>
-    </div>
-    <div class="stage">
-      <p class="hero-l rv draft">Стратегия, контент-план и Reels для экспертов и коучей: ролики, которые досматривают и пересылают.</p>
-      <div class="me slot" style="outline-offset:-6px"><img src="assets/tatiana-portrait-original.jpg" alt="Татьяна Жукова — исходная фотография из личного архива" loading="eager" fetchpriority="high"><p class="hint" style="text-align:center"><b>Сюда</b>твоё фото в полный рост или по пояс, без фона (PNG). Голова перекроет буквы, как на твоих примерах</p></div>
-      <div class="hero-r rv" style="--d:2">
-        <a href="#">Telegram</a><a href="#">Instagram</a><a href="#">Почта</a>
-        <span style="opacity:.7">Германия, работаю онлайн</span>
-      </div>
-      <div class="chip c1"><b>68 тыс.</b>просмотров у лучшего ролика</div>
-      <div class="chip c2"><b>1 день</b>от первого сообщения до клиента</div>
-      <div class="chip c3"><b>с 2012</b>в онлайн-маркетинге</div>
-    </div>
+<header class="panel dark hero">
+  <div class="hero-arc" aria-hidden="true"></div>
+  <div class="hero-photo" role="img" aria-label="Портрет Татьяны Жуковой"><img src="assets/tatiana-portrait-original.jpg" alt="Татьяна Жукова"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">SMM · МАРКЕТИНГ · КОНТЕНТ · AI</div>
+    <h1>ТАТЬЯНА<br>ЖУКОВА</h1>
+    <p>Продвижение брендов в социальных сетях с фокусом на стратегию, контент и реальные результаты</p>
+    <a class="hero-action" href="#case1">Смотреть портфолио <span>⟶</span></a>
   </div>
 </header>
 
