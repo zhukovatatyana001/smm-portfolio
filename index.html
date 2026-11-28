@@ -81,8 +81,6 @@ a{color:inherit}
 .hero{position:relative;height:56.25vw;min-height:600px;max-height:1120px;overflow:hidden;background:var(--navy-900);color:var(--on-navy)}
 .hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0%}
 .hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,18,32,.78) 0%,rgba(11,18,32,.5) 26%,rgba(11,18,32,.08) 46%,transparent 60%),linear-gradient(180deg,rgba(11,18,32,.55) 0%,transparent 18%)}
-.hero-arc{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.hero-arc path{fill:none;stroke:var(--gold);stroke-width:1.6;stroke-linecap:round;vector-effect:non-scaling-stroke;opacity:.9}
 .hero-text{position:absolute;left:0;right:0;top:clamp(110px,12.4vw,190px);z-index:2}
 .hero-text .in{max-width:1360px;margin:0 auto;padding:0 var(--pad)}
 .kicker{font-size:clamp(11px,.95vw,14px);font-weight:500;letter-spacing:.3em;text-transform:uppercase;opacity:.9}
@@ -109,6 +107,10 @@ a{color:inherit}
 .about .link{margin-top:28px}
 .services{border-top-left-radius:var(--r-lg);padding:clamp(30px,3vw,46px) var(--pad) clamp(40px,4vw,56px) clamp(24px,3vw,46px);box-shadow:-20px 0 60px rgba(9,14,26,.25)}
 .services .lead{margin-top:10px}
+.services{position:relative}
+.services::before{content:"";position:absolute;z-index:2;top:0;left:0;right:0;height:var(--r-lg);border-top:2px solid #E2C487;border-left:2px solid #E2C487;border-top-left-radius:var(--r-lg);pointer-events:none;filter:drop-shadow(0 0 6px rgba(226,196,135,.6))}
+.js .services::before{clip-path:inset(0 100% 0 0);transition:clip-path 1.8s .2s cubic-bezier(.6,.1,.2,1)}
+.js .services.drawn::before{clip-path:inset(0 0 0 0)}
 .svc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
 .svc article{display:flex;gap:16px;align-items:flex-start;border:1px solid rgba(236,224,206,.42);border-radius:var(--r-sm);padding:20px 18px;background:rgba(255,255,255,.025);transition:border-color .35s,transform .35s,background .35s}
 .svc article:hover{border-color:var(--gold);transform:translateY(-3px);background:rgba(255,255,255,.05)}
@@ -450,8 +452,6 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
 .js .rv.in{opacity:1;transform:none;filter:none}
 .js .hero-photo{transform:scale(1.07);transition:transform 2.4s cubic-bezier(.2,.7,.2,1)}
 .js .ready .hero-photo{transform:none}
-.js .hero-arc path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.6s .5s cubic-bezier(.6,.1,.2,1)}
-.js .ready .hero-arc path{stroke-dashoffset:0}
 .js .hero-text .up{opacity:0;transform:translateY(22px);transition:opacity 1.1s,transform 1.1s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d)*130ms + 250ms)}
 .js .ready .hero-text .up{opacity:1;transform:none}
 
@@ -480,10 +480,10 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
   .hero{height:auto;min-height:0;max-height:none;display:flex;flex-direction:column}
   .hero-photo{position:relative;height:82vw;object-position:57% 0%}
   .hero-shade{bottom:auto;height:82vw;background:linear-gradient(180deg,rgba(11,18,32,.6) 0%,transparent 22%,transparent 62%,rgba(17,26,43,.95) 100%)}
-  .hero-arc{display:none}
   .hero-text{position:relative;top:auto;padding:8px 0 120px;background:linear-gradient(180deg,rgba(17,26,43,.95),rgba(12,19,34,.5) 30%),url("assets/silk.jpg") center/cover}
   .duo,.duo2,.edu,.vis,.caseopen{grid-template-columns:1fr}
   .services{border-top-right-radius:var(--r-lg)}
+  .services::before{border-right:2px solid #E2C487;border-top-right-radius:var(--r-lg)}
   .approach{border-radius:0 var(--r-lg) 0 0}
   .steps{grid-template-columns:1fr 1fr;gap:28px 10px}
   .steps li:nth-child(2)::after{display:none}
@@ -521,10 +521,10 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
   .site-foot .soc{margin:0}
 }
 @media (prefers-reduced-motion:reduce){
+  .js .services::before{clip-path:none;transition:none}
   html{scroll-behavior:auto}
   .js .rv,.js .hero-text .up{opacity:1;transform:none;filter:none;transition:none}
   .js .hero-photo{transform:none;transition:none}
-  .js .hero-arc path{stroke-dashoffset:0;transition:none}
   .case img,.phone,.svc article,.tiles div{transition:none}
 }
 </style>
@@ -573,7 +573,6 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
 <header class="hero" id="top">
   <img class="hero-photo" src="assets/hero.jpg" alt="Татьяна Жукова за столиком в кафе с ноутбуком и чашкой кофе" width="1672" height="941">
   <div class="hero-shade"></div>
-  <svg class="hero-arc" viewBox="0 0 1000 562" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M664 70 C 760 22, 930 34, 1012 210"/></svg>
   <div class="hero-text">
     <div class="in">
       <p class="kicker up" style="--d:0">SMM&nbsp;&nbsp;•&nbsp;&nbsp;Маркетинг&nbsp;&nbsp;•&nbsp;&nbsp;Контент&nbsp;&nbsp;•&nbsp;&nbsp;AI</p>
@@ -1077,6 +1076,9 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
     secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<innerHeight*.35)cur=i});
     links.forEach(function(a,i){a.classList.toggle('on',i===cur)})};
   addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var svc=document.querySelector('.services');
+  if(svc){if('IntersectionObserver' in window){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){svc.classList.add('drawn');so.disconnect()}})},{threshold:.15});so.observe(svc)}else svc.classList.add('drawn')}
 
   var drag=false;
   document.querySelectorAll('.carousel').forEach(function(car){
