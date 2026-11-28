@@ -381,6 +381,29 @@ a{color:inherit}
 .player.img .pic{position:static;display:block;width:auto;height:auto;max-width:90vw;max-height:84vh;border-radius:20px}
 .car-btn{aspect-ratio:4/5;border-radius:16px;box-shadow:0 18px 40px rgba(64,44,22,.16)}
 
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.chips button{font:600 13.5px var(--sans);color:var(--on-navy);background:transparent;border:1px solid rgba(236,224,206,.4);border-radius:999px;padding:10px 18px;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.chips button:hover{border-color:var(--gold)}
+.chips button.on{background:var(--gold);border-color:var(--gold);color:#1E1A12}
+.reels-car{grid-auto-columns:calc((100% - 64px)/4.6)}
+.rl{margin:0;scroll-snap-align:start}
+.rl[hidden]{display:none}
+.rl-btn{position:relative}
+.st-btn .pl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:rgba(12,16,26,.35);border:1px solid rgba(244,236,223,.85);backdrop-filter:blur(6px);display:grid;place-items:center;transition:background .3s}
+.st-btn:hover .pl{background:var(--gold);border-color:var(--gold)}
+.st-btn .pl svg{width:18px;height:18px;fill:#fff;stroke:none;margin-left:3px}
+.car-btn{position:relative}
+.rl-btn .pl,.car-btn .pl{top:auto;left:auto;right:14px;bottom:14px;transform:none;width:48px;height:48px}
+.rl figcaption{padding:12px 4px 0;font-size:12.5px;line-height:1.35;color:var(--on-navy-soft)}
+.rl figcaption b{display:block;font-family:var(--serif);font-weight:500;font-size:26px;line-height:1;color:#F7EFE1;margin-bottom:4px}
+.rl figcaption span{display:block;color:var(--gold);font-weight:600}
+.rl figcaption small{display:block;font-size:12.5px;margin-top:3px}
+.vc-t{margin-top:clamp(48px,5vw,72px)}
+.player .vid{display:none}
+.player.vd iframe,.player.vd .ext,.player.vd .pic{display:none}
+.player.vd .vid{display:block;max-width:90vw;max-height:84vh;width:auto;height:auto;border-radius:20px;background:#000}
+.player.vd .frame{width:auto;aspect-ratio:auto;background:none}
+
 /* плеер */
 .player{border:0;padding:0;background:transparent;max-width:none;max-height:none;margin:auto;overflow:visible;color:var(--on-navy)}
 .player::backdrop{background:rgba(8,12,22,.84);backdrop-filter:blur(6px)}
@@ -471,6 +494,7 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
   .extras{grid-template-columns:1fr 1fr;gap:22px 28px}
   .carousel{grid-auto-columns:calc((100% - 32px)/2.4)}
   .stories-car{grid-auto-columns:calc((100% - 48px)/3.4)}
+  .reels-car{grid-auto-columns:calc((100% - 48px)/3.4)}
   .story-row{grid-template-columns:repeat(2,minmax(0,1fr))}
   .funnel{grid-template-columns:repeat(3,minmax(0,1fr))}
   .contact .wrap{grid-template-columns:1fr 1fr;gap:28px}
@@ -522,6 +546,7 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
   .edu li{grid-template-columns:70px 1fr}
   .carousel{grid-auto-columns:80%}
   .stories-car{grid-auto-columns:62%}
+  .reels-car{grid-auto-columns:62%}
   .c-bar{display:none}
   .caseopen .meta{grid-template-columns:1fr 1fr}
   .site-foot .soc{margin:0}
@@ -953,6 +978,24 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
       <span class="c-bar"><i></i></span>
     </div>
     <p class="hint">Настоящая карусель из папки «КОНТЕНТ-ПЛАН / НОЯБРЬ 2026 / 16.11-22.11», собрана 19.11. Нажми на слайд, он откроется крупно.</p>
+    <p class="part rv vc-t">Видео-карусель отзывов</p>
+    <p class="c-meta rv"><span><b>7 слайдов</b> обложка и шесть голосов участников</span><span><b>Приём</b> в кадре эксперт делает волну, звучит голос участницы</span><span><b>Призыв</b> ВОЛНА</span></p>
+    <div class="carousel rv" tabindex="0" aria-label="Видео-карусель, листается вбок">
+      <button class="st-btn car-btn" type="button" data-img="assets/vcar/v00.jpg" aria-label="Открыть обложку"><img src="assets/vcar/v00.jpg" alt="Обложка: Вау-эффект от Happy Wave" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-src="assets/vcar/v01.mp4" aria-label="Смотреть: голос участницы Ольга"><img src="assets/vcar/v01.jpg" alt="Слайд 2: Ольга" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button>
+      <button class="st-btn car-btn" type="button" data-src="assets/vcar/v02.mp4" aria-label="Смотреть: голос участницы Алина"><img src="assets/vcar/v02.jpg" alt="Слайд 3: Алина" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button>
+      <button class="st-btn car-btn" type="button" data-src="assets/vcar/v03.mp4" aria-label="Смотреть: голос участницы Даша"><img src="assets/vcar/v03.jpg" alt="Слайд 4: Даша" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button>
+      <button class="st-btn car-btn" type="button" data-src="assets/vcar/v04.mp4" aria-label="Смотреть: голос участницы Володимира"><img src="assets/vcar/v04.jpg" alt="Слайд 5: Володимира" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button>
+      <button class="st-btn car-btn" type="button" data-src="assets/vcar/v05.mp4" aria-label="Смотреть: голос участницы Мишель"><img src="assets/vcar/v05.jpg" alt="Слайд 6: Мишель" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button>
+      <button class="st-btn car-btn" type="button" data-src="assets/vcar/v06.mp4" aria-label="Смотреть: голос участницы Назар"><img src="assets/vcar/v06.jpg" alt="Слайд 7: Назар" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button>
+    </div>
+    <div class="c-ctrl rv">
+      <button class="c-btn prev" type="button" aria-label="Предыдущий слайд" data-dir="-1"><svg><use href="#i-arr"/></svg></button>
+      <span class="c-count" aria-live="polite">1 / 7</span>
+      <button class="c-btn next" type="button" aria-label="Следующий слайд" data-dir="1"><svg><use href="#i-arr"/></svg></button>
+      <span class="c-bar"><i></i></span>
+    </div>
+    <p class="hint">«Вау-эффект от Happy Wave: что меняется, когда делаешь волну» — последняя видео-карусель, 25.11. Выбрала её из-за конкретных результатов в каждом голосе и единого кадра: везде Аня делает волну у воды.</p>
   </div>
 </section>
 
@@ -976,16 +1019,35 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
 
 <section class="sec silk-bg" id="s13">
   <div class="wrap">
-    <div class="sec-head"><span class="num rv">13</span><div><h2 class="h2 rv">Reels</h2><p class="lead rv">Ролики проекта: развлекательные тесты, экспертные видео, отзывы и нарезки эфиров</p></div></div>
-    <div class="reel-row">
-      <div class="rv"><button class="reel-btn" type="button" data-v="1OQo7iCtWwvBf2K5ugUs_TpE2EqdYGwZr" aria-label="Смотреть ролик «Выбери 1 или 2»"><span class="phone"><span class="scr"><img src="https://lh3.googleusercontent.com/d/1OQo7iCtWwvBf2K5ugUs_TpE2EqdYGwZr=w480" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><span class="pl"><svg><use href="#i-play"/></svg></span></span></span></button><p class="reel-cap"><b>69 тыс.</b>визуальный тест<small>«Выбери 1 или 2: твой внутренний запрос»</small></p></div>
-      <div class="rv" style="--d:1"><button class="reel-btn" type="button" data-v="16HElgEfqFBj2BZX_Wmz3VTY4RquvqRYx" aria-label="Смотреть ролик «Какая дверь открыта для тебя»"><span class="phone"><span class="scr"><img src="https://lh3.googleusercontent.com/d/16HElgEfqFBj2BZX_Wmz3VTY4RquvqRYx=w480" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><span class="pl"><svg><use href="#i-play"/></svg></span></span></span></button><p class="reel-cap"><b>67,5 тыс.</b>визуальный тест<small>«Какая дверь открыта для тебя прямо сейчас?»</small></p></div>
-      <div class="rv" style="--d:2"><button class="reel-btn" type="button" data-v="1JOqh5cG4UTPFK7CKi8tQG6QlRIr0_C_v" aria-label="Смотреть ролик «Нарисуй восьмёрку»"><span class="phone"><span class="scr"><img src="https://lh3.googleusercontent.com/d/1JOqh5cG4UTPFK7CKi8tQG6QlRIr0_C_v=w480" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><span class="pl"><svg><use href="#i-play"/></svg></span></span></span></button><p class="reel-cap"><b>67,1 тыс.</b>тест-действие<small>«Нарисуй восьмёрку и узнай, как ты принимаешь решения»</small></p></div>
-      <div class="rv" style="--d:3"><button class="reel-btn" type="button" data-v="15W6pr7BTy8Apw006tTHRhj5_1qCa9Udf" aria-label="Смотреть ролик «Капучино за 10 минут до закрытия»"><span class="phone"><span class="scr"><img src="https://lh3.googleusercontent.com/d/15W6pr7BTy8Apw006tTHRhj5_1qCa9Udf=w480" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()"><span class="pl"><svg><use href="#i-play"/></svg></span></span></span></button><p class="reel-cap"><b>Эфир</b>нарезка утренней практики<small>«Капучино за 10 минут до закрытия»</small></p></div>
-      <div class="rv todo" style="--d:4"><div class="phone"><div class="scr"></div></div><p class="reel-cap"><b>Отзыв</b>видео-отзыв участницы<small>Видео на Диске закрыто: открыть доступ?</small></p></div>
-      <div class="rv todo" style="--d:5"><div class="phone"><div class="scr"></div></div><p class="reel-cap"><b>Разговор</b>разговорный Reels<small>Сегодняшний ролик: пришли файл или название</small></p></div>
+    <div class="sec-head"><span class="num rv">13</span><div><h2 class="h2 rv">Reels</h2><p class="lead rv">16 роликов разных форматов: визуальные тесты, разговорные и экспертные, склейки, списки, тренды и нарезки утренних эфиров</p></div></div>
+    <div class="chips rv" role="group" aria-label="Фильтр по формату">
+      <button type="button" class="on" data-f="all">Все</button><button type="button" data-f="test">Визуальные тесты</button><button type="button" data-f="talk">Разговорные и эфиры</button><button type="button" data-f="edit">Склейки, списки, тренды</button>
     </div>
-    <p class="hint">Видео открываются прямо на сайте с твоего Google Диска (у них доступ по ссылке). Лидер 69,6 тыс. «Какой символ притянул тебя?» в таблице без видео, поэтому первым стоит 69 тыс. Отзывы на Диске закрыты, без твоего разрешения доступ не меняю.</p>
+    <div class="carousel reels-car rv" tabindex="0" aria-label="Reels, листаются вбок">
+      <figure class="rl" data-cat="test"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r497.mp4" aria-label="Смотреть: Как ты принимаешь решения в жизни?"><img src="assets/reels/r497.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><b>67,3 тыс.</b><span>визуальный тест</span><small>Как ты принимаешь решения в жизни?</small></figcaption></figure>
+      <figure class="rl" data-cat="talk"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r499.mp4" aria-label="Смотреть: Как за 5 минут в день улучшить свою жизнь"><img src="assets/reels/r499.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>экспертный ролик</span><small>Как за 5 минут в день улучшить свою жизнь</small></figcaption></figure>
+      <figure class="rl" data-cat="test"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r505.mp4" aria-label="Смотреть: С кем ты сядешь рядом?"><img src="assets/reels/r505.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><b>45,8 тыс.</b><span>визуальный тест</span><small>С кем ты сядешь рядом?</small></figcaption></figure>
+      <figure class="rl" data-cat="edit"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r507.mp4" aria-label="Смотреть: Любовь к себе: не чувство, а работа"><img src="assets/reels/r507.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>склейка с фрагментом фильма</span><small>Любовь к себе: не чувство, а работа</small></figcaption></figure>
+      <figure class="rl" data-cat="test"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r501.mp4" aria-label="Смотреть: Какую чашку ты возьмёшь утром?"><img src="assets/reels/r501.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><b>37,2 тыс.</b><span>визуальный тест</span><small>Какую чашку ты возьмёшь утром?</small></figcaption></figure>
+      <figure class="rl" data-cat="talk"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r503.mp4" aria-label="Смотреть: «Это у вас по наследству?»"><img src="assets/reels/r503.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>разговорный</span><small>«Это у вас по наследству?»</small></figcaption></figure>
+      <figure class="rl" data-cat="test"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r515.mp4" aria-label="Смотреть: Пять женщин на одном вечере. Какая из них — ты?"><img src="assets/reels/r515.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>визуальный тест</span><small>Пять женщин на одном вечере. Какая из них — ты?</small></figcaption></figure>
+      <figure class="rl" data-cat="edit"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r509.mp4" aria-label="Смотреть: 20 лет изучаю счастье. Вот что я поняла"><img src="assets/reels/r509.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>список в лайфстайл-кадрах</span><small>20 лет изучаю счастье. Вот что я поняла</small></figcaption></figure>
+      <figure class="rl" data-cat="test"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r519.mp4" aria-label="Смотреть: Зимний город. Что ты заметила первым?"><img src="assets/reels/r519.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>визуальный тест</span><small>Зимний город. Что ты заметила первым?</small></figcaption></figure>
+      <figure class="rl" data-cat="talk"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r521.mp4" aria-label="Смотреть: Опять решаешь всё за всех?"><img src="assets/reels/r521.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>разговорный</span><small>Опять решаешь всё за всех?</small></figcaption></figure>
+      <figure class="rl" data-cat="talk"><button class="st-btn rl-btn" type="button" data-v="15W6pr7BTy8Apw006tTHRhj5_1qCa9Udf" aria-label="Смотреть: Капучино за 10 минут до закрытия"><img src="https://lh3.googleusercontent.com/d/15W6pr7BTy8Apw006tTHRhj5_1qCa9Udf=w480" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>нарезка утреннего эфира</span><small>Капучино за 10 минут до закрытия</small></figcaption></figure>
+      <figure class="rl" data-cat="edit"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r511.mp4" aria-label="Смотреть: 8 привычек сильных людей, из-за которых им бывает трудно жить"><img src="assets/reels/r511.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>список на кадрах с выступления</span><small>8 привычек сильных людей, из-за которых им бывает трудно жить</small></figcaption></figure>
+      <figure class="rl" data-cat="test"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r495.mp4" aria-label="Смотреть: Что сейчас забирает у тебя лёгкость?"><img src="assets/reels/r495.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>интерактив «зажми экран»</span><small>Что сейчас забирает у тебя лёгкость?</small></figcaption></figure>
+      <figure class="rl" data-cat="talk"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r535.mp4" aria-label="Смотреть: Невозможное возможно: как перестать бороться и начать жить легко?"><img src="assets/reels/r535.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>диалог с гостьей</span><small>Невозможное возможно: как перестать бороться и начать жить легко?</small></figcaption></figure>
+      <figure class="rl" data-cat="talk"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r517.mp4" aria-label="Смотреть: Какая самая ценная валюта в нашем мире?"><img src="assets/reels/r517.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>экспертный монолог</span><small>Какая самая ценная валюта в нашем мире?</small></figcaption></figure>
+      <figure class="rl" data-cat="edit"><button class="st-btn rl-btn" type="button" data-src="assets/reels/r493.mp4" aria-label="Смотреть: День эксперта у моря"><img src="assets/reels/r493.jpg" alt="" loading="lazy"><span class="pl"><svg><use href="#i-play"/></svg></span></button><figcaption><span>тренд «7 AM — 11 AM»</span><small>День эксперта у моря</small></figcaption></figure>
+    </div>
+    <div class="c-ctrl rv">
+      <button class="c-btn prev" type="button" aria-label="Предыдущий ролик" data-dir="-1"><svg><use href="#i-arr"/></svg></button>
+      <span class="c-count" aria-live="polite">1 / 16</span>
+      <button class="c-btn next" type="button" aria-label="Следующий ролик" data-dir="1"><svg><use href="#i-arr"/></svg></button>
+      <span class="c-bar"><i></i></span>
+    </div>
+    <p class="hint">Ролики из тех, что ты прислала 28.11, плюс нарезка эфира с Диска. Просмотры подписаны там, где они точно известны. Два похожих теста («В какой мир ты войдёшь?» и «На каком этаже ты выйдешь?») не ставила.</p>
   </div>
 </section>
 
@@ -1050,7 +1112,7 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
 </div>
 
 <dialog class="player" id="player" aria-label="Просмотр ролика">
-  <div class="frame"><iframe title="Ролик" allow="autoplay; fullscreen" allowfullscreen></iframe><img class="pic" alt=""></div>
+  <div class="frame"><iframe title="Ролик" allow="autoplay; fullscreen" allowfullscreen></iframe><img class="pic" alt=""><video class="vid" controls playsinline preload="none"></video></div>
   <div class="bar2"><a class="ext" href="#" target="_blank" rel="noopener">Открыть на Google Диске</a><button class="x" type="button">Закрыть</button></div>
 </dialog>
 
@@ -1085,13 +1147,14 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
   var drag=false;
   document.querySelectorAll('.carousel').forEach(function(car){
     var ctrl=car.nextElementSibling;if(!ctrl||!ctrl.classList.contains('c-ctrl'))return;
-    var slides=car.children,cnt=ctrl.querySelector('.c-count'),bar=ctrl.querySelector('.c-bar i'),
+    var cnt=ctrl.querySelector('.c-count'),bar=ctrl.querySelector('.c-bar i'),
         prev=ctrl.querySelector('.prev'),next=ctrl.querySelector('.next');
-    var step=function(){return slides[1].offsetLeft-slides[0].offsetLeft};
+    var vis=function(){return [].filter.call(car.children,function(c){return !c.hidden})};
+    var step=function(){var v=vis();return v.length>1?v[1].offsetLeft-v[0].offsetLeft:car.clientWidth};
     var go=function(n){car.scrollBy({left:step()*n,behavior:still?'auto':'smooth'})};
     var upd=function(){var i=Math.round(car.scrollLeft/step()),max=car.scrollWidth-car.clientWidth;
-      if(car.scrollLeft>=max-4)i=slides.length-1;
-      cnt.textContent=(i+1)+' / '+slides.length;bar.style.setProperty('--p',((i+1)/slides.length*100)+'%');
+      var n=vis().length;if(car.scrollLeft>=max-4)i=n-1;
+      cnt.textContent=(i+1)+' / '+n;bar.style.setProperty('--p',((i+1)/n*100)+'%');
       prev.disabled=car.scrollLeft<4;next.disabled=car.scrollLeft>=max-4};
     car.addEventListener('scroll',function(){requestAnimationFrame(upd)},{passive:true});
     [prev,next].forEach(function(b){b.addEventListener('click',function(){go(+b.dataset.dir)})});
@@ -1107,18 +1170,30 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
 
   var dlg=document.getElementById('player');
   if(dlg&&dlg.showModal){
-    var fr=dlg.querySelector('iframe'),pic=dlg.querySelector('.pic'),ext=dlg.querySelector('.ext');
+    var fr=dlg.querySelector('iframe'),pic=dlg.querySelector('.pic'),vid=dlg.querySelector('.vid'),ext=dlg.querySelector('.ext');
+    var mode=function(m){dlg.classList.remove('img','vd');if(m)dlg.classList.add(m)};
     document.querySelectorAll('[data-v]').forEach(function(b){b.addEventListener('click',function(){
-      var id=b.dataset.v;dlg.classList.remove('img');fr.src='https://drive.google.com/file/d/'+id+'/preview';ext.href='https://drive.google.com/file/d/'+id+'/view';dlg.showModal()})});
+      var id=b.dataset.v;mode('');fr.src='https://drive.google.com/file/d/'+id+'/preview';ext.href='https://drive.google.com/file/d/'+id+'/view';dlg.showModal()})});
     document.querySelectorAll('[data-img]').forEach(function(b){b.addEventListener('click',function(){
-      dlg.classList.add('img');pic.src=b.dataset.img;pic.alt=b.querySelector('img').alt;dlg.showModal()})});
+      mode('img');pic.src=b.dataset.img;pic.alt=b.querySelector('img').alt;dlg.showModal()})});
+    document.querySelectorAll('[data-src]').forEach(function(b){b.addEventListener('click',function(){
+      mode('vd');vid.poster=b.querySelector('img').src;vid.src=b.dataset.src;dlg.showModal();var pr=vid.play();if(pr&&pr.catch)pr.catch(function(){})})});
     dlg.querySelector('.x').addEventListener('click',function(){dlg.close()});
     dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
-    dlg.addEventListener('close',function(){fr.src='about:blank'});
+    dlg.addEventListener('close',function(){fr.src='about:blank';vid.pause();vid.removeAttribute('src');vid.load()});
   }else{
     document.querySelectorAll('[data-v]').forEach(function(b){b.addEventListener('click',function(){open('https://drive.google.com/file/d/'+b.dataset.v+'/view','_blank')})});
     document.querySelectorAll('[data-img]').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.img,'_blank')})});
+    document.querySelectorAll('[data-src]').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.src,'_blank')})});
   }
+
+  document.querySelectorAll('.chips').forEach(function(ch){
+    var car=ch.nextElementSibling;
+    ch.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+      ch.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});
+      var f=b.dataset.f;car.querySelectorAll('.rl').forEach(function(r){r.hidden=!(f==='all'||r.dataset.cat===f)});
+      car.scrollLeft=0;car.dispatchEvent(new Event('scroll'))});
+  });
 })();
 </script>
 </body>
