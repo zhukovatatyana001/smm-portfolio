@@ -392,7 +392,13 @@ a{color:inherit}
 .player .x:hover{background:var(--gold);color:#1E1A12;border-color:var(--gold)}
 
 /* визуал */
-.vis{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4vw,64px);align-items:start}
+.vis{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,64px);align-items:center}
+.phones{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,26px);max-width:620px}
+.ph-btn{all:unset;display:block;cursor:zoom-in;aspect-ratio:1080/2340;border-radius:34px;overflow:hidden;border:7px solid #10141E;box-shadow:0 30px 60px rgba(40,28,14,.28);transition:transform .35s}
+.ph-btn:hover{transform:translateY(-4px)}
+.ph-btn:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.ph-btn:nth-child(2){margin-top:56px}
+.ph-btn img{display:block;width:100%;height:100%;object-fit:cover}
 .hl{display:flex;gap:14px;margin-bottom:18px}
 .hl span{width:68px;height:68px;border-radius:50%;background:var(--navy-800) center/cover;box-shadow:0 0 0 1px var(--gold),0 0 0 5px var(--cream);outline:1px solid rgba(174,138,79,.4);outline-offset:6px}
 .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;border-radius:14px;overflow:hidden;max-width:460px;box-shadow:0 26px 50px rgba(64,44,22,.18)}
@@ -952,23 +958,19 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
 
 <section class="sec cream-bg" id="s12" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><span class="num rv">12</span><div><h2 class="h2 rv">Визуал</h2><p class="lead rv">Единый стиль профиля: актуальное, сетка ленты и правила оформления</p></div></div>
+    <div class="sec-head"><span class="num rv">12</span><div><h2 class="h2 rv">Визуал</h2><p class="lead rv">Профиль эксперта глазами подписчика: шапка, актуальное и лента, где тесты, карусели и видео-отзывы чередуются в одном стиле</p></div></div>
     <div class="vis">
-      <div class="rv">
-        <div class="hl"><span style="background-image:url(assets/crop-flowers.jpg)"></span><span style="background-image:url(assets/coffee.jpg)"></span><span style="background-image:url(assets/crop-silk.jpg)"></span><span style="background-image:url(assets/crop-bokeh.jpg)"></span></div>
-        <div class="feed">
-          <span style="background-image:url(assets/crop-silk.jpg)">Кейс</span><span class="c">Тест</span><span style="background-image:url(assets/case1.jpg)"></span>
-          <span class="g">Отзыв</span><span style="background-image:url(assets/coffee.jpg)"></span><span style="background-image:url(assets/crop-silk.jpg)">Эфир</span>
-          <span style="background-image:url(assets/crop-bokeh.jpg)"></span><span class="c">Практика</span><span style="background-image:url(assets/crop-flowers.jpg)"></span>
-        </div>
-        <p class="hint">Сюда: скриншот реальной сетки профиля и обложки актуального.</p>
+      <div class="phones rv">
+        <button class="ph-btn" type="button" data-img="assets/visual/profile_1.jpg" aria-label="Открыть макет профиля крупно"><img src="assets/visual/profile_1.jpg" alt="Профиль annaklipachenko: шапка, актуальное и закреплённые публикации" loading="lazy"></button>
+        <button class="ph-btn" type="button" data-img="assets/visual/profile_2.jpg" aria-label="Открыть ленту крупно"><img src="assets/visual/profile_2.jpg" alt="Лента профиля: визуальные тесты, карусели и видео-карусели «Вау-эффект от Happy Wave»" loading="lazy"></button>
       </div>
       <div class="rules">
-        <article class="card rv"><h3>Шрифты и цвета</h3><p>Заголовки роликов — крупный прописной курсив с засечками, кремовый; субтитры — простой гротеск. Размер заголовка не уменьшаем.</p></article>
-        <article class="card rv" style="--d:1"><h3>Обложки</h3><p>Единая обложка серии для экспертных роликов и отзывов, на неё ставится заголовок конкретного ролика.</p></article>
-        <article class="card rv" style="--d:2"><h3>Правила кадра</h3><p>Ролик начинается с эксперта в кадре. Заголовок ниже зоны, которую обрезает лента; субтитры не закрывают лицо.</p></article>
+        <article class="card rv"><h3>Шрифты и цвета</h3><p>Заголовки роликов крупным прописным курсивом с засечками, кремовым цветом. Карусели на светлом фоне: засечки в заголовке и спокойный гротеск в тексте. Субтитры простым гротеском.</p></article>
+        <article class="card rv" style="--d:1"><h3>Ритм ленты</h3><p>Визуальные тесты с экспертом в кадре чередуются с каруселями в едином стиле и видео-каруселями «Вау-эффект от Happy Wave» на фоне морской волны.</p></article>
+        <article class="card rv" style="--d:2"><h3>Правила кадра</h3><p>Ролик начинается с эксперта в кадре. Заголовок стоит ниже зоны, которую обрезает сетка профиля, субтитры не закрывают лицо.</p></article>
       </div>
     </div>
+    <p class="hint">Макет собран из твоих скриншотов 28.11 в режиме зрителя: панель, «Редактировать» и «Поделиться» убраны, кнопки как у подписчика. Просмотры на плитках оставила, их видит только владелец. Нажми на экран, он откроется крупно.</p>
   </div>
 </section>
 
