@@ -375,6 +375,9 @@ a{color:inherit}
 .silk-bg .c-meta b{color:var(--on-navy)}
 .player .pic{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .player.img iframe,.player:not(.img) .pic,.player.img .ext{display:none}
+.player.img .frame{width:auto;aspect-ratio:auto;background:none}
+.player.img .pic{position:static;display:block;width:auto;height:auto;max-width:90vw;max-height:84vh;border-radius:20px}
+.car-btn{aspect-ratio:4/5;border-radius:16px;box-shadow:0 18px 40px rgba(64,44,22,.16)}
 
 /* плеер */
 .player{border:0;padding:0;background:transparent;max-width:none;max-height:none;margin:auto;overflow:visible;color:var(--on-navy)}
@@ -922,28 +925,29 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
 <section class="sec cream-bg" id="s11">
   <div class="wrap">
     <div class="sec-head"><span class="num rv">11</span><div><h2 class="h2 rv">Карусель</h2><p class="lead rv">«Не знаешь, чего хочешь?» — десять вопросов, на которые хочется ответить про себя и переслать подруге</p></div></div>
-    <p class="c-meta rv"><span><b>12 слайдов</b> обложка, 10 вопросов, финал</span><span><b>Цель</b> сохранения и пересылки</span><span><b>Кодовое слово</b> ВОЛНА</span></p>
+    <p class="c-meta rv"><span><b>13 слайдов</b> обложка, 10 вопросов, вывод и финал</span><span><b>Цель</b> сохранения и пересылки</span><span><b>Кодовое слово</b> ВОЛНА</span><span><b>Фото</b> новая серия эксперта из Праги</span></p>
     <div class="carousel rv" id="car" tabindex="0" aria-label="Слайды карусели, листаются вбок">
-      <div class="slide dark"><span class="n"><span>Карусель</span><span>1 / 12</span></span><div><p class="ct">Не знаешь, чего хочешь?</p><p class="cs">10 вопросов, после которых «не знаю» уже не такой простой ответ</p></div><span class="bar"></span></div>
-      <div class="slide"><span class="n"><span>Вопрос</span><span>2 / 12</span></span><div><p class="qn">01</p><p class="qt">Что бы ты делала завтра, если бы никто не ждал от тебя отчёта?</p></div><span class="bar"></span></div>
-      <div class="slide"><span class="n"><span>Вопрос</span><span>3 / 12</span></span><div><p class="qn">02</p><p class="qt">Чему ты тихо завидуешь в чужой жизни?</p></div><span class="bar"></span></div>
-      <div class="slide"><span class="n"><span>Вопрос</span><span>4 / 12</span></span><div><p class="qn">03</p><p class="qt">На что ты тратишь деньги, когда тебе плохо?</p></div><span class="bar"></span></div>
-      <div class="slide"><span class="n"><span>Вопрос</span><span>5 / 12</span></span><div><p class="qn">04</p><p class="qt">Что ты перестала хотеть, потому что «уже поздно»?</p></div><span class="bar"></span></div>
-      <div class="slide"><span class="n"><span>Вопрос</span><span>6 / 12</span></span><div><p class="qn">05</p><p class="qt">О чём ты мечтала в двадцать, и что из этого до сих пор отзывается?</p></div><span class="bar"></span></div>
-      <div class="slide"><span class="n"><span>Вопрос</span><span>7 / 12</span></span><div><p class="qn">06</p><p class="qt">Какой день за последний месяц ты бы прожила ещё раз?</p></div><span class="bar"></span></div>
-      <div class="slide"><span class="n"><span>Вопрос</span><span>8 / 12</span></span><div><p class="qn">07</p><p class="qt">За что ты держишься годами, хотя легко обошлась бы без этого?</p></div><span class="bar"></span></div>
-      <div class="slide"><span class="n"><span>Вопрос</span><span>9 / 12</span></span><div><p class="qn">08</p><p class="qt">Чего ты боишься попросить вслух?</p></div><span class="bar"></span></div>
-      <div class="slide"><span class="n"><span>Вопрос</span><span>10 / 12</span></span><div><p class="qn">09</p><p class="qt">Какой разговор ты откладываешь дольше всего?</p></div><span class="bar"></span></div>
-      <div class="slide"><span class="n"><span>Вопрос</span><span>11 / 12</span></span><div><p class="qn">10</p><p class="qt">Если бы деньги не были вопросом, где бы ты проснулась через год?</p></div><span class="bar"></span></div>
-      <div class="slide dark"><span class="n"><span>Финал</span><span>12 / 12</span></span><p class="et">Если хотя бы на три вопроса ответ пришёл сразу, ты знаешь, чего хочешь. Просто давно себе в этом не признавалась.</p><span class="code">Напиши ВОЛНА</span></div>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c01.jpg" aria-label="Открыть слайд 1"><img src="assets/carousel/c01.jpg" alt="Слайд 1. Обложка: Не знаешь, чего хочешь? 10 вопросов" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c02.jpg" aria-label="Открыть слайд 2"><img src="assets/carousel/c02.jpg" alt="Слайд 2. Вопрос 01: в какой момент за последний месяц мне было по-настоящему хорошо" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c03.jpg" aria-label="Открыть слайд 3"><img src="assets/carousel/c03.jpg" alt="Слайд 3. Вопрос 02: чему я завидую в чужой жизни" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c04.jpg" aria-label="Открыть слайд 4"><img src="assets/carousel/c04.jpg" alt="Слайд 4. Вопрос 03: отмена какого плана принесла бы облегчение" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c05.jpg" aria-label="Открыть слайд 5"><img src="assets/carousel/c05.jpg" alt="Слайд 5. Вопрос 04: какую часть своей жизни я хотела бы сохранить" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c06.jpg" aria-label="Открыть слайд 6"><img src="assets/carousel/c06.jpg" alt="Слайд 6. Вопрос 05: что мне хотелось попробовать до того, как я решила, что уже поздно" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c07.jpg" aria-label="Открыть слайд 7"><img src="assets/carousel/c07.jpg" alt="Слайд 7. Вопрос 06: как выглядел бы мой обычный вторник" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c08.jpg" aria-label="Открыть слайд 8"><img src="assets/carousel/c08.jpg" alt="Слайд 8. Вопрос 07: чего бы я хотела, если бы не пришлось никому объяснять свой выбор" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c09.jpg" aria-label="Открыть слайд 9"><img src="assets/carousel/c09.jpg" alt="Слайд 9. Вопрос 08: чем я готова поступиться ради этого желания" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c10.jpg" aria-label="Открыть слайд 10"><img src="assets/carousel/c10.jpg" alt="Слайд 10. Вопрос 09: какое желание я могу проверить, не переворачивая всю жизнь" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c11.jpg" aria-label="Открыть слайд 11"><img src="assets/carousel/c11.jpg" alt="Слайд 11. Вопрос 10: что я сделаю в ближайшие семь дней" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c12.jpg" aria-label="Открыть слайд 12"><img src="assets/carousel/c12.jpg" alt="Слайд 12. Выбери один ответ, который хочется проверить" loading="lazy"></button>
+      <button class="st-btn car-btn" type="button" data-img="assets/carousel/c13.jpg" aria-label="Открыть слайд 13"><img src="assets/carousel/c13.jpg" alt="Слайд 13. Финал: напиши ВОЛНА" loading="lazy"></button>
     </div>
     <div class="c-ctrl rv">
       <button class="c-btn prev" type="button" aria-label="Предыдущий слайд" data-dir="-1"><svg><use href="#i-arr"/></svg></button>
-      <span class="c-count" aria-live="polite">1 / 12</span>
+      <span class="c-count" aria-live="polite">1 / 13</span>
       <button class="c-btn next" type="button" aria-label="Следующий слайд" data-dir="1"><svg><use href="#i-arr"/></svg></button>
       <span class="c-bar"><i></i></span>
     </div>
-    <p class="hint">Пока слайды набраны текстом в стиле сайта. Готовые картинки с пражскими фото лежат у тебя на компьютере: открой приложение Claude на компьютере, я попрошу доступ к папке «Волна» и поставлю настоящие слайды.</p>
+    <p class="hint">Настоящая карусель из папки «КОНТЕНТ-ПЛАН / НОЯБРЬ 2026 / 16.11-22.11», собрана 19.11. Нажми на слайд, он откроется крупно.</p>
   </div>
 </section>
 
