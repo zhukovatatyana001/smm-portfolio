@@ -361,6 +361,21 @@ a{color:inherit}
 .c-meta{display:flex;flex-wrap:wrap;gap:8px 26px;margin-bottom:22px;font-size:13.5px;color:var(--ink-soft)}
 .c-meta b{color:var(--ink);font-weight:600}
 
+.stories-car{grid-auto-columns:calc((100% - 64px)/4.6)}
+.st-btn{all:unset;display:block;scroll-snap-align:start;cursor:zoom-in;border-radius:22px;overflow:hidden;aspect-ratio:9/16;background:#0c1322;box-shadow:0 22px 46px rgba(4,8,18,.45);transition:transform .35s}
+.st-btn:hover{transform:translateY(-4px)}
+.st-btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.st-btn img{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.silk-bg .c-btn{border-color:var(--gold);color:var(--on-navy)}
+.silk-bg .c-btn:hover{background:var(--gold);color:#1E1A12}
+.silk-bg .c-count{color:var(--gold)}
+.silk-bg .c-bar{background:rgba(236,224,206,.3)}
+.silk-bg .c-bar i{background:var(--gold)}
+.silk-bg .c-meta{color:var(--on-navy-soft)}
+.silk-bg .c-meta b{color:var(--on-navy)}
+.player .pic{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.player.img iframe,.player:not(.img) .pic,.player.img .ext{display:none}
+
 /* плеер */
 .player{border:0;padding:0;background:transparent;max-width:none;max-height:none;margin:auto;overflow:visible;color:var(--on-navy)}
 .player::backdrop{background:rgba(8,12,22,.84);backdrop-filter:blur(6px)}
@@ -446,6 +461,7 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
   .reel-row > div{flex:0 1 calc((100% - 36px)/3);max-width:none}
   .extras{grid-template-columns:1fr 1fr;gap:22px 28px}
   .carousel{grid-auto-columns:calc((100% - 32px)/2.4)}
+  .stories-car{grid-auto-columns:calc((100% - 48px)/3.4)}
   .story-row{grid-template-columns:repeat(2,minmax(0,1fr))}
   .funnel{grid-template-columns:repeat(3,minmax(0,1fr))}
   .contact .wrap{grid-template-columns:1fr 1fr;gap:28px}
@@ -496,6 +512,7 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
   .plan td,.plan th{padding:12px 12px}
   .edu li{grid-template-columns:70px 1fr}
   .carousel{grid-auto-columns:80%}
+  .stories-car{grid-auto-columns:62%}
   .c-bar{display:none}
   .caseopen .meta{grid-template-columns:1fr 1fr}
   .site-foot .soc{margin:0}
@@ -875,14 +892,30 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
 
 <section class="sec silk-bg" id="s10">
   <div class="wrap">
-    <div class="sec-head"><span class="num rv">10</span><div><h2 class="h2 rv">Stories</h2><p class="lead rv">Связная серия сторис: знакомство, кейс, прогрев и отзыв</p></div></div>
-    <div class="story-row">
-      <div class="story rv"><img src="assets/crop-flowers.jpg" alt="" loading="lazy"><span class="t"><b>Знакомство</b><i>с чего начать</i><span class="go"><svg><use href="#i-arr"/></svg></span></span></div>
-      <div class="story rv" style="--d:1"><img src="assets/coffee.jpg" alt="" loading="lazy"><span class="t"><b>Кейс</b><i>в цифрах</i><span class="go"><svg><use href="#i-arr"/></svg></span></span></div>
-      <div class="story rv" style="--d:2"><img src="assets/crop-bokeh.jpg" alt="" loading="lazy"><span class="t"><b>Прогрев</b><i>к продукту</i><span class="go"><svg><use href="#i-arr"/></svg></span></span></div>
-      <div class="story rv" style="--d:3"><img src="assets/crop-silk.jpg" alt="" loading="lazy"><span class="t"><b>Отзыв</b><i>участницы</i><span class="go"><svg><use href="#i-arr"/></svg></span></span></div>
+    <div class="sec-head"><span class="num rv">10</span><div><h2 class="h2 rv">Stories</h2><p class="lead rv">«Отдых без пользы»: серия от узнаваемой утренней ситуации к гайду по кодовому слову</p></div></div>
+    <p class="c-meta rv"><span><b>13 сторис</b> одна история с фото эксперта</span><span><b>Вовлечение</b> реакция и опрос</span><span><b>Кодовое слово</b> ЭНЕРГИЯ</span></p>
+    <div class="carousel stories-car rv" tabindex="0" aria-label="Сторис, листаются вбок">
+      <button class="st-btn" type="button" data-img="assets/stories/s01.jpg" aria-label="Открыть сторис 1"><img src="assets/stories/s01.jpg" alt="Сторис 1: Представь: у тебя свободное утро" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s02.jpg" aria-label="Открыть сторис 2"><img src="assets/stories/s02.jpg" alt="Сторис 2: Ты ещё с кровати не встала, а уже отстаёшь от плана" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s03.jpg" aria-label="Открыть сторис 3"><img src="assets/stories/s03.jpg" alt="Сторис 3: Пошла гулять — заодно зайду за продуктами" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s04.jpg" aria-label="Открыть сторис 4"><img src="assets/stories/s04.jpg" alt="Сторис 4: Села пить чай — пока отвечу на сообщения" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s05.jpg" aria-label="Открыть сторис 5"><img src="assets/stories/s05.jpg" alt="Сторис 5: Легла на диван — хотя бы включу что-нибудь полезное" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s06.jpg" aria-label="Открыть сторис 6"><img src="assets/stories/s06.jpg" alt="Сторис 6: А просто полежать можно? Опрос" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s07.jpg" aria-label="Открыть сторис 7"><img src="assets/stories/s07.jpg" alt="Сторис 7: Если тебе самой хочется учиться или заниматься спортом — прекрасно" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s08.jpg" aria-label="Открыть сторис 8"><img src="assets/stories/s08.jpg" alt="Сторис 8: Но если сегодня хочется почитать детектив" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s09.jpg" aria-label="Открыть сторис 9"><img src="assets/stories/s09.jpg" alt="Сторис 9: Вопрос из гайда: каким был бы мой отдых" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s10.jpg" aria-label="Открыть сторис 10"><img src="assets/stories/s10.jpg" alt="Сторис 10: Может быть, ты давно знаешь ответ" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s11.jpg" aria-label="Открыть сторис 11"><img src="assets/stories/s11.jpg" alt="Сторис 11: Гайд «25 способов поднять энергию»" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s12.jpg" aria-label="Открыть сторис 12"><img src="assets/stories/s12.jpg" alt="Сторис 12: Прочитай и посмотри, чего тебе сейчас хочется" loading="lazy"></button>
+      <button class="st-btn" type="button" data-img="assets/stories/s13.jpg" aria-label="Открыть сторис 13"><img src="assets/stories/s13.jpg" alt="Сторис 13: Напиши ЭНЕРГИЯ — получишь гайд" loading="lazy"></button>
     </div>
-    <p class="hint">Это оформление-заглушка. Замени на 4–5 своих сторис одной серии.</p>
+    <div class="c-ctrl rv">
+      <button class="c-btn prev" type="button" aria-label="Предыдущая сторис" data-dir="-1"><svg><use href="#i-arr"/></svg></button>
+      <span class="c-count" aria-live="polite">1 / 13</span>
+      <button class="c-btn next" type="button" aria-label="Следующая сторис" data-dir="1"><svg><use href="#i-arr"/></svg></button>
+      <span class="c-bar"><i></i></span>
+    </div>
+    <p class="hint">Тексты твои, фото Ани из папки «Материалы Ани», обложка — настоящий гайд. Нажми на сторис, она откроется крупно.</p>
   </div>
 </section>
 
@@ -1012,7 +1045,7 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
 </div>
 
 <dialog class="player" id="player" aria-label="Просмотр ролика">
-  <div class="frame"><iframe title="Ролик" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+  <div class="frame"><iframe title="Ролик" allow="autoplay; fullscreen" allowfullscreen></iframe><img class="pic" alt=""></div>
   <div class="bar2"><a class="ext" href="#" target="_blank" rel="noopener">Открыть на Google Диске</a><button class="x" type="button">Закрыть</button></div>
 </dialog>
 
@@ -1041,36 +1074,42 @@ body.hints .draft{outline:1.5px dashed var(--gold-deep);outline-offset:4px;borde
     links.forEach(function(a,i){a.classList.toggle('on',i===cur)})};
   addEventListener('scroll',onScroll,{passive:true});onScroll();
 
-  var car=document.getElementById('car');
-  if(car){
-    var slides=car.children,ctrl=car.nextElementSibling,cnt=ctrl.querySelector('.c-count'),bar=ctrl.querySelector('.c-bar i'),
+  var drag=false;
+  document.querySelectorAll('.carousel').forEach(function(car){
+    var ctrl=car.nextElementSibling;if(!ctrl||!ctrl.classList.contains('c-ctrl'))return;
+    var slides=car.children,cnt=ctrl.querySelector('.c-count'),bar=ctrl.querySelector('.c-bar i'),
         prev=ctrl.querySelector('.prev'),next=ctrl.querySelector('.next');
     var step=function(){return slides[1].offsetLeft-slides[0].offsetLeft};
+    var go=function(n){car.scrollBy({left:step()*n,behavior:still?'auto':'smooth'})};
     var upd=function(){var i=Math.round(car.scrollLeft/step()),max=car.scrollWidth-car.clientWidth;
       if(car.scrollLeft>=max-4)i=slides.length-1;
       cnt.textContent=(i+1)+' / '+slides.length;bar.style.setProperty('--p',((i+1)/slides.length*100)+'%');
       prev.disabled=car.scrollLeft<4;next.disabled=car.scrollLeft>=max-4};
     car.addEventListener('scroll',function(){requestAnimationFrame(upd)},{passive:true});
-    [prev,next].forEach(function(b){b.addEventListener('click',function(){car.scrollBy({left:step()*+b.dataset.dir,behavior:still?'auto':'smooth'})})});
-    car.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();car.scrollBy({left:step()*(e.key==='ArrowRight'?1:-1),behavior:still?'auto':'smooth'})}});
-    var down=false,x0=0,s0=0,moved=false;
-    car.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;x0=e.clientX;s0=car.scrollLeft});
-    addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-x0;if(Math.abs(dx)>4){moved=true;car.classList.add('drag')}car.scrollLeft=s0-dx});
-    addEventListener('pointerup',function(){if(!down)return;down=false;if(!moved)return;car.classList.remove('drag');
-      var i=Math.round(car.scrollLeft/step());car.scrollTo({left:i*step(),behavior:still?'auto':'smooth'})});
+    [prev,next].forEach(function(b){b.addEventListener('click',function(){go(+b.dataset.dir)})});
+    car.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();go(e.key==='ArrowRight'?1:-1)}});
+    var down=false,x0=0,s0=0;
+    car.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;drag=false;x0=e.clientX;s0=car.scrollLeft});
+    addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-x0;if(Math.abs(dx)>4){drag=true;car.classList.add('drag')}if(drag)car.scrollLeft=s0-dx});
+    addEventListener('pointerup',function(){if(!down)return;down=false;if(!drag)return;car.classList.remove('drag');
+      var i=Math.round(car.scrollLeft/step());car.scrollTo({left:i*step(),behavior:still?'auto':'smooth'});setTimeout(function(){drag=false},0)});
+    car.addEventListener('click',function(e){if(drag){e.preventDefault();e.stopPropagation()}},true);
     upd();
-  }
+  });
 
   var dlg=document.getElementById('player');
   if(dlg&&dlg.showModal){
-    var fr=dlg.querySelector('iframe'),ext=dlg.querySelector('.ext');
+    var fr=dlg.querySelector('iframe'),pic=dlg.querySelector('.pic'),ext=dlg.querySelector('.ext');
     document.querySelectorAll('[data-v]').forEach(function(b){b.addEventListener('click',function(){
-      var id=b.dataset.v;fr.src='https://drive.google.com/file/d/'+id+'/preview';ext.href='https://drive.google.com/file/d/'+id+'/view';dlg.showModal()})});
+      var id=b.dataset.v;dlg.classList.remove('img');fr.src='https://drive.google.com/file/d/'+id+'/preview';ext.href='https://drive.google.com/file/d/'+id+'/view';dlg.showModal()})});
+    document.querySelectorAll('[data-img]').forEach(function(b){b.addEventListener('click',function(){
+      dlg.classList.add('img');pic.src=b.dataset.img;pic.alt=b.querySelector('img').alt;dlg.showModal()})});
     dlg.querySelector('.x').addEventListener('click',function(){dlg.close()});
     dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
     dlg.addEventListener('close',function(){fr.src='about:blank'});
   }else{
     document.querySelectorAll('[data-v]').forEach(function(b){b.addEventListener('click',function(){open('https://drive.google.com/file/d/'+b.dataset.v+'/view','_blank')})});
+    document.querySelectorAll('[data-img]').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.img,'_blank')})});
   }
 })();
 </script>
